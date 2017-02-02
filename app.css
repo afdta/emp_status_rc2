@@ -1,0 +1,24 @@
+.m-i{
+
+}
+
+.m-i.makesans, .m-i .makesans, .m-i .makesans *{
+	font-family: franklin-gothic-urw,helvetica,sans-serif;
+}
+
+.m-i select{
+	outline:none;
+	background:none;
+	background-color:transparent;
+	padding:0.5em 1em 0.5em 1em;
+	border:1px solid #aaaaaa;
+	max-width:100%;
+}
+
+@media (min-width:0px){
+	.m-i .margin-15{margin:1em;}
+}
+
+@media (min-width:640px){
+	.m-i .margin-15{margin:1em 15%;}
+}

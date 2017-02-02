@@ -41,7 +41,7 @@ function main(){
 	options.filter(function(d,i){return i==0}).attr("disabled",true).attr("selected",true);
 
 	dom.legendWrap = dom.menu.append("div");
-	dom.legendWrap.append("p").text("To do: Add a legend (gray triangle is the mean for each race/ethnicity grouping). Add vertical grid lines?")
+	dom.legendWrap.append("p").text("To do: Add a legend (gray triangle is the mean for each race/ethnicity grouping). Add vertical grid lines?");
 
 	dom.svg = dom.wrap.append("svg").style("height","100%").style("width","100%");
 

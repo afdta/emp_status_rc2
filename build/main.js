@@ -1,4 +1,6 @@
 //to do: remove all obs with missing values from the data
+//to do: widths of titles at narrow width are too wide
+//refine interactions
 
 import dir from "../../js-modules/rackspace.js";
 import dimensions from "../../js-modules/dimensions.js";
@@ -46,7 +48,7 @@ function main(){
 	dom.svg = dom.wrap.append("svg").style("height","100%").style("width","100%");
 
 	dom.plotgroup = {};
-	dom.plotgroup.height = 41; //height of a single line of dots
+	dom.plotgroup.height = 29; //height of a single line of dots
 	dom.plotgroup.pad = 60;
 
 	//variables
@@ -54,7 +56,7 @@ function main(){
 
 	d3.json(fp, function(error, data){
 
-		var groups = ["White","Black","Latino","Asian","American Indian","All other"];
+		var groups = ["White","Black","Latino","Asian"];
 		var cols = ['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33']; //credit: colorbrewer2.org
 		var cols = ["#e86e25", "#a91317", "#5ca86b", "#4d76b1", "#adc32b", "#88bbca"];
 
@@ -103,9 +105,18 @@ function main(){
 		});
 
 		var groupHeight = (groups.length*dom.plotgroup.height) + (dom.plotgroup.pad*2);
-			dom.svg.style("height",((groupHeight*3)+60)+"px");
-		var groupScale = d3.scaleBand().domain(groups).range([0,groupHeight]).round(true).paddingOuter(1).paddingInner(0.5);
-		var valScale = d3.scaleLinear().domain(extent).range([20,95]);
+			dom.svg.style("height",((groupHeight*3)+120)+"px");
+		var groupScale = d3.scaleBand().domain(groups).range([0,groupHeight]).round(true).paddingOuter(0.75).paddingInner(0.5);
+		var valScale = d3.scaleLinear().domain(extent).range([5,95]);
+
+		var pctBounds = [valScale(-3.5)+"%", valScale(3.5)+"%"];
+		var pctBounds2 = [valScale(-3.25)+"%", valScale(3.25)+"%"];
+
+		var ticks = valScale.ticks(6);
+			ticks.pop();
+		var ticks2 = ticks.map(function(d){
+				return {v:d, x:valScale(d)+"%"}
+			});
 
 		var bottom_layer = dom.svg.append("g");
 		var plot_layer = dom.svg.append("g");
@@ -118,30 +129,85 @@ function main(){
 		var groups_enter = groups_update.enter().append("g");
 			groups_enter.append("g").classed("axis_layer",true);
 			groups_enter.append("g").classed("place_layer",true);
-			groups_enter.append("g").classed("avg_layer",true).attr("transform","translate(-5,0)");
-			groups_enter.append("g").classed("label_layer",true).append("rect");
-			groups_enter.append("g").classed("anno_layer",true).attr("transform","translate(-105,0)");
+			groups_enter.append("g").classed("place_block_layer",true).style("pointer-events","none");
+			groups_enter.append("g").classed("vline_layer",true);
+			groups_enter.append("g").classed("label_layer",true).append("line").style("pointer-events","none");
+			groups_enter.append("g").classed("avg_layer",true).attr("transform","translate(-5,0)").style("pointer-events","none");
+			groups_enter.append("g").classed("anno_layer",true).attr("transform","translate(-105,0)").style("pointer-events","none");
 
 		var groups = groups_enter.merge(groups_update)
 			.attr("transform",function(d,i){
-				return "translate(0," + ((i*(groupHeight+15))+40) + ")"
+				return "translate(0," + ((i*(groupHeight+15))+30) + ")"
 			});
 
 		//horizontal axes
-		var xaxes = groups.select("g.axis_layer").selectAll("line").data(function(d,i){
+		var hlines = groups.select("g.axis_layer").selectAll("line").data(function(d,i){
 			return d.obs;
 		});
-		xaxes.exit().remove();
-		xaxes.enter().append("line").merge(xaxes)
-		.attr("x1", "15%")
-		.attr("x2", "85%")
-		.attr("y1", function(d){return groupScale(d.key)+10})
-		.attr("y2", function(d){return groupScale(d.key)+10})
+		hlines.exit().remove();
+		hlines.enter().append("line").merge(hlines)
+		.attr("x1", pctBounds2[0])
+		.attr("x2", pctBounds2[1])
+		.attr("y1", function(d){return groupScale(d.key)+6})
+		.attr("y2", function(d){return groupScale(d.key)+6})
 		.attr("stroke","#aaaaaa")
 		.attr("stroke-width","1")
 		.attr("stroke-dasharray","2,3")
 		.style("shape-rendering","crispEdges")
 		;
+
+		//vertical axes
+		var vlineLayer = groups.select("g.vline_layer");
+		var vlines = vlineLayer.selectAll("line.vaxis").data(ticks2);
+			vlines.exit().remove();
+			vlines.enter().append("line").classed("vaxis",true).merge(vlines)
+				.attr("x1", function(d,i){return d.x})
+				.attr("x2", function(d,i){return d.x})
+				.attr("y1", function(d){return 7})
+				.attr("y2", function(d){return groupHeight-25})
+				.attr("stroke","#aaaaaa")
+				.attr("stroke-width","1")
+				.attr("stroke-dasharray","2,3")
+				.style("shape-rendering","crispEdges")
+				;
+
+		//tick marks
+		var lastAxisLayer = vlineLayer.filter(function(d,i){return i==2});
+		var tickMarks = lastAxisLayer.selectAll("line.tick-mark").data(ticks2);
+			tickMarks.exit().remove();
+			tickMarks.enter().append("line").classed("tick-mark",true).merge(tickMarks)
+				.attr("x1", function(d,i){return d.x})
+				.attr("x2", function(d,i){return d.x})
+				.attr("y1", function(d){return groupHeight-26})
+				.attr("y2", function(d){return groupHeight-20})
+				.attr("stroke","#333333")
+				.attr("stroke-width","1")
+				.style("shape-rendering","crispEdges")
+				;
+
+		var tickMarksLab = lastAxisLayer.selectAll("text.tick-mark").data(ticks2);
+			tickMarksLab.exit().remove();
+			tickMarksLab.enter().append("text").classed("tick-mark",true).merge(tickMarksLab)
+				.attr("x", function(d,i){return d.x})
+				.attr("y", function(d){return groupHeight-7})
+				.text(function(d,i){return d.v})
+				.attr("text-anchor","middle")
+				.style("font-size","13px")
+				;
+
+		lastAxisLayer.selectAll("text.xaxis-label")
+					 .data(["Distance from the average", "(number of standard deviations)"])
+					 .enter()
+					 .append("text")
+					 .classed("xaxis-label",true)
+					 .attr("x", valScale(0)+"%")
+					 .attr("y", function(d,i){
+					 	return (groupHeight+17) + (i*18);
+					 })
+					 .attr("text-anchor","middle")
+					 .text(function(d,i){return d})
+					 .style("font-size","13px")
+					 ;
 
 
 		//labels
@@ -153,7 +219,7 @@ function main(){
 		labels.exit().remove();
 		labels.enter().append("text").classed("group-label",true).merge(labels)
 		.attr("x", valScale(0)+"%")
-		.attr("y", function(d){return groupScale(d.key)})
+		.attr("y", function(d){return groupScale(d.key)-2})
 		.attr("text-anchor","middle")
 		.text(function(d){return d.key.toUpperCase()})
 		.style("font-size","11px")
@@ -163,38 +229,52 @@ function main(){
 		;
 
 		//variable labels
-		var vlabels_u = label_layers.selectAll("text.var-label").data(function(d,i){
+		var vlabels = label_layers.selectAll("text.var-label").data(function(d,i){
 			return [d.var];
 		});
-		vlabels_u.exit().remove();
-		var vlabels_e = vlabels_u.enter().append("text").classed("var-label",true);
-			vlabels_e.append("tspan").classed("var-label-span",true);
-			vlabels_e.append("tspan").classed("var-label-place",true).style("font-size","0.8em");
-
-		var vlabels = vlabels_e.merge(vlabels_u)
-					.attr("x", valScale(0)+"%")
-					.attr("y", "6")
-					.attr("text-anchor","middle")
-					.style("font-size","1em")
-					;
-
-
-			vlabels.select("tspan.var-label-span")
-					.text(function(d){return d.label})
-					.style("font-weight","bold")
-					//.attr("fill","#ffffff")
-					;
+		vlabels.exit().remove();
+		vlabels.enter()
+			   .append("text")
+			   .classed("var-label",true)
+			   .merge(vlabels)
+			   .attr("x", valScale(0)+"%")
+			   //.attr("x","15%")
+			   .attr("dx","0")
+			   .attr("y", "0")
+			   //.attr("text-anchor","start")
+			   .attr("text-anchor","middle")
+			   .style("font-size","1em")
+			   .text(function(d){return d.label})
+			   .style("font-weight","bold")
+			   ;
 
 		//boxes around variable labels
-		var labelBorders = label_layers.select("rect").attr("x", "15%")
-													  .attr("transform","translate(0,0)")
-													  .attr("y","-13")
-													  .attr("height","25")
-													  .attr("width","70%")
-													  .attr("fill","#dddddd")
-													  .attr("stroke","none")
+		var labelBorders = label_layers.select("line").attr("x1", pctBounds[0])
+													  .attr("x2", pctBounds[1])
+													  .attr("y1","7")
+													  .attr("y2","7")
+													  .attr("stroke","#aaaaaa")
+													  .attr("stroke-width","1")
 													  .style("shape-rendering","crispEdges")
 													  ;
+
+		//append a rectangle to cover bottom of "dots" -- enables mouse events to occur in space below data
+		var blanks = groups.select("g.place_block_layer")
+							.selectAll("rect").data(function(d,i){
+								return d.avg.map(function(d){return d.key});
+							});
+		blanks.enter().append("rect").merge(blanks)
+						.attr("width","100%")
+						.attr("height","14px")
+						.attr("x","5")
+						.attr("y",function(d){
+							return groupScale(d)+12;
+						})
+						.attr("fill","#fafafa")
+						.attr("fill-opacity","1")
+						;
+
+
 
 		var places = groups.select("g.place_layer")
 			.selectAll("g")
@@ -213,8 +293,8 @@ function main(){
 			//.attr("r",3)
 			.attr("x",valScale(0)+"%")
 			.attr("width","3px")
-			.attr("height","12px")
-			.attr("y",4)
+			.attr("height","24px")
+			.attr("y",0)
 			.attr("fill", function(d,i){
 				return cols[order[d.race]];
 			})
@@ -252,11 +332,10 @@ function main(){
 			});
 
 			//nested svg
-			var avg_u = groups.select("g.avg_layer")
-			.selectAll("svg")
-			.data(function(d,i){
-				return d.avg;
-			});
+			var avg_u = groups.select("g.avg_layer").selectAll("svg")
+				.data(function(d,i){
+					return d.avg;
+				});
 
 			var avg_e = avg_u.enter().append("svg")
 				.style("width","10px")
@@ -264,14 +343,14 @@ function main(){
 				//avg_e.append("rect").attr("width","3").attr("height","20").attr("x","1").attr("y",0);
 				//avg_e.append("rect").attr("width","1").attr("height","20").attr("x","2").attr("y",0);
 				//avg_e.append("rect").attr("width","5").attr("height","10").attr("x","0").attr("y",16);
-				avg_e.append("path").attr("d","M6.5,16 l5,10 l-10,0 z");
+				avg_e.append("path").attr("d","M6.5,13 l5,9 l-10,0 z");
 
 			avg_e.merge(avg_u)
 				.attr("x", function(d,i){
 					var avg = d.values[0].avg;
 					return valScale(avg) + "%"
 				}).attr("y", function(d,i){
-					return groupScale(d.key)+2;
+					return groupScale(d.key);
 				})
 				.selectAll("path")
 				.attr("stroke","#eeeeee")
@@ -281,80 +360,125 @@ function main(){
 				;
 
 			var currently_selected_geo = null;
-			function selectGeo(code, persistent, duration){
+			function selectGeo(code, persistent, duration, isolate){
 				var dur = arguments.length > 2 ? duration : 500;
-				//console.log(code + ": " + name);
-				var svgs_u = groups.select("g.anno_layer").selectAll("svg").data(function(d,i){
-					var averages = {};
-					(function(){
-						var i = -1;
-						while(++i < d.avg.length){
-							averages[d.avg[i].key] = d.avg[i].values[0].avg;
-						}
-					})();
-
-
-					var m = d.obs.map(function(d,i){
-						var r = {};
-						r.key = d.key;
-						var vals = d.values.filter(function(d,i){
-							return d.fips === code && d.z !== null;
-						});
-						r.value = vals.length > 0 && vals[0].fips === code ? vals[0] : null;
-						r.above_average = r.value === null || r.value.z >= averages[r.key];
-						return r;
-					}).filter(function(d,i){
-						return d.value !== null;
-					});
-					return m;
-				}, function(d){return d.key});
-					svgs_u.exit().remove();
-				var svgs_e = svgs_u.enter().append("svg").attr("width","200px").attr("height","100px").attr("x","50%");
-					//svgs_e.append("rect").attr("width","3").attr("height","21").attr("x","1").attr("y","0")
-					//svgs_e.append("rect").attr("width","1").attr("height","21").attr("x","2").attr("y","0")
-					//svgs_e.append("rect").attr("width","3").attr("height","10").attr("x","1").attr("y",17);
-					
-					//svgs_e.append("rect").attr("height","10px").attr("width","300px").attr("fill","yellow").attr("x","6").attr("y","0");
-					//svgs_e.append("rect").attr("height","10px").attr("width","100px").attr("fill","brown").attr("x","6").attr("y","0").style("shape-rendering","crispEdges");
-					svgs_e.append("path").attr("d","M106.5,16 l5,10 l-10,0 z");
-					svgs_e.append("text").text("name").attr("x",113).attr("y",26).style("font-size","11px").text("Label").attr("fill","#666666");
-
-				var svgs = svgs_e.merge(svgs_u);
-
-				svgs.attr("y", function(d,i){
-						return groupScale(d.key)+2;
-					})
-					.select("path")
-					.attr("fill",function(d,i){
-						return cols[order[d.value.race]];
-					})
-					
-				svgs.transition()
-					.duration(dur)
-					.attr("x", function(d,i){
-						var z = d.value.z;
-						return valScale(z) + "%"
-					})
-					//.style("shape-rendering","crispEdges")
-					;
-
-				svgs.select("text").text(function(d,i){
-					return format.sh1(d.value.share);
-				}).attr("text-anchor",function(d,i){
-					return d.above_average ? "start" : "end";
-				}).attr("x", function(d,i){
-					return d.above_average ? 113 : 100;
-				})
-				;
-
-				vlabels.select("tspan.var-label-place").text(function(d,i){
-					return " / Highlighting " + geo_lookup[code];
-				});
-
-				if(persistent){
-					dom.select.node().value = currently_selected_geo = code;
+				if(code===null){
+					groups.select("g.anno_layer").selectAll("svg").remove();
 				}
-			}
+				else{
+
+					//console.log(code + ": " + name);
+					var svgs_u = groups.select("g.anno_layer").selectAll("svg").data(function(d,i){
+						var averages = {};
+						(function(){
+							var i = -1;
+							while(++i < d.avg.length){
+								averages[d.avg[i].key] = d.avg[i].values[0].avg;
+							}
+						})();
+
+						//emp, unemp, nilf
+						var status = d.var.code;
+
+						//look through the observations by race, filter the value for the selected geo code
+						var m = d.obs.map(function(d,i){
+							var r = {};
+							r.race = d.key;
+							r.status = status;
+							var vals = d.values.filter(function(d,i){
+								return d.fips === code && d.z !== null;
+							});
+							r.value = vals.length > 0 && vals[0].fips === code ? vals[0] : null;
+							r.x = r.value !== null ? valScale(r.value.z) : 0;
+							
+							r.above_average = r.value === null || r.value.z >= averages[r.race];
+
+							if(r.x > 80 || r.x < 20){r.above_average = !r.above_average}
+
+							return r;
+						}).filter(function(d,i){
+							return d.value !== null;
+						});
+						return m;
+					}, function(d){
+						return d.race
+					});
+
+						svgs_u.exit().remove();
+					var svgs_e = svgs_u.enter().append("svg").attr("width","200px").attr("height","100px").attr("x","50%");
+						//svgs_e.append("rect").attr("width","3").attr("height","21").attr("x","1").attr("y","0")
+						//svgs_e.append("rect").attr("width","1").attr("height","21").attr("x","2").attr("y","0")
+						//svgs_e.append("rect").attr("width","3").attr("height","10").attr("x","1").attr("y",17);
+						
+						//svgs_e.append("rect").attr("height","10px").attr("width","300px").attr("fill","yellow").attr("x","6").attr("y","0");
+						//svgs_e.append("rect").attr("height","10px").attr("width","100px").attr("fill","brown").attr("x","6").attr("y","0").style("shape-rendering","crispEdges");
+						svgs_e.append("path").attr("d","M106.5,13 l5,9 l-10,0 z");
+						svgs_e.append("text").text("name").attr("x",113).attr("y",22).style("font-size","11px").text("Label");//.attr("fill","#666666");
+
+					var svgs = svgs_e.merge(svgs_u)
+									.attr("y", function(d,i){
+										return groupScale(d.race);
+									});
+
+					svgs.select("path")
+						.attr("fill",function(d,i){
+							return cols[order[d.value.race]];
+						});
+
+					svgs.select("text")
+						.attr("text-anchor",function(d,i){
+							return d.above_average ? "start" : "end";
+						}).attr("x", function(d,i){
+							return d.above_average ? 113 : 100;
+						})
+						.text(function(d,i){
+							return format.sh1(d.value.share);
+						})
+						;
+
+					if(!!isolate){
+						svgs.interrupt()
+							.style("opacity",function(d,i){
+								return d.status==isolate[0] && d.race==isolate[1] ? 1 : 0;
+							})
+							.transition()
+							.delay(function(d,i){
+								return d.status==isolate[0] && d.race==isolate[1] ? 0 : 100;
+							})
+							.duration(function(d,i){
+								return d.status==isolate[0] && d.race==isolate[1] ? 0 : dur;
+							})
+							.attr("x", function(d,i){
+								return d.x + "%";
+							})
+							.style("opacity",1)
+							/*.on("end", function(d,i){
+								var thiz = d3.select(this);
+								thiz.style("opacity",1);
+							})*/
+							;
+					} else{
+						svgs.interrupt()
+							.style("opacity",1)
+							.transition()
+							.duration(dur)
+							.style("opacity",1)
+							.attr("x", function(d,i){
+								var z = d.value.z;
+								return valScale(z) + "%"
+							})
+							;
+					}				
+
+					/*vlabels.select("tspan.var-label-place").text(function(d,i){
+						return " / Highlighting " + geo_lookup[code];
+					});*/
+
+					if(persistent){
+						dom.select.node().value = currently_selected_geo = code;
+					}
+				}
+			} //end selectGeo
 
 			if(!!Array.prototype.filter && !!Array.prototype.map){ 
 				var geo_init = false;
@@ -373,7 +497,7 @@ function main(){
 						//this.value = g.fips;
 					}
 
-					selectGeo(g.fips, true, geo_init ? 500 : 0);
+					selectGeo(g.fips, true, geo_init ? 700 : 0);
 					geo_init = true;
 				});
 
@@ -381,23 +505,22 @@ function main(){
 				D.on("mouseenter", function(d,i){
 					clearTimeout(hover_timer);
 					//hover_timer = setTimeout(function(){selectGeo(d.fips, 0)},50)
-					selectGeo(d.fips, false, 100);
+					selectGeo(d.fips, false, 700, [d.status, d.race]);
 					//var thiz = d3.select(this);
 					//thiz.attr("width","5").attr("height","20").attr("transform","translate(-1,-3)").style("pointer-events","none");
 				});
 
 				D.on("mouseleave", function(d,i){
 					clearTimeout(hover_timer);
-					if(currently_selected_geo){
-						hover_timer = setTimeout(function(){
-							selectGeo(currently_selected_geo, true, 100);
-						}, 1000);
-					}
+
+					hover_timer = setTimeout(function(){
+						selectGeo(currently_selected_geo, true, 700);
+					}, 500);
 				})
 
 				D.on("mousedown", function(d,i){
 					clearTimeout(hover_timer);
-					selectGeo(d.fips, true, 100);
+					selectGeo(d.fips, true, 700);
 				})
 			}
 			else{

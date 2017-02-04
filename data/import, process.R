@@ -13,6 +13,8 @@ tidy$race <- sub("white", "White", tidy$race)
 tidy$name <- gsub("^\\s*|\\s*$","",tidy$Name)
 tidy$fips <- gsub("^\\s*|\\s*$","",tidy$FIPS)
 
+groups <- c("Latino", "Asian", "Black", "White", "Total", "All other", "American Indian")
+
 #test summs
 tst <- tidy %>% group_by(FIPS, Name, race) %>% summarise(total=sum(share, na.rm=TRUE))
 
@@ -20,7 +22,7 @@ nmlz <- function(chunk){
   chunk$z <- as.numeric(scale(chunk$share))
   return(chunk)
 }
-tidy2 <- tidy[c("fips","name","race","Total","status","count","share")] %>% filter(race!="Total") %>% group_by(status) %>% do(nmlz(.))
+tidy2 <- tidy[tidy$race %in% groups[1:4], c("fips","name","race","Total","status","count","share")] %>% filter(race!="Total") %>% group_by(status) %>% do(nmlz(.))
 tidy2m <- tidy2 %>% group_by(status, race) %>% summarise(avg=mean(z, na.rm=TRUE), med=median(z, na.rm=TRUE))
 
 ll <- list(obs=split(tidy2, tidy2$status), avg=split(tidy2m, tidy2m$status))

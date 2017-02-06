@@ -363,7 +363,8 @@ function main(){
 			function selectGeo(code, persistent, duration, isolate){
 				var dur = arguments.length > 2 ? duration : 500;
 				if(code===null){
-					groups.select("g.anno_layer").selectAll("svg").remove();
+					//no-op
+					//groups.select("g.anno_layer").selectAll("svg").remove();
 				}
 				else{
 

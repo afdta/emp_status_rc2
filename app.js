@@ -161,12 +161,12 @@ function main(){
 	dom.wrap = d3.select("#employment-status-wrap")
 		.style("width","100%")
 		.style("max-width","1600px")
-		.style("margin","0px auto")
+		.style("margin","1em auto")
 		.style("min-height","500px")
 		.classed("m-i makesans",true)
 		;
 
-	dom.menu = dom.wrap.append("div").classed("c-fix margin-15",true);
+	dom.menu = dom.wrap.append("div").classed("c-fix",true);
 	
 	dom.selectWrap = dom.menu.append("div");
 	dom.select = dom.selectWrap.append("select");
@@ -188,7 +188,7 @@ function main(){
 				  .append("svg").attr("width","100%").attr("height","100%")
 				  .append("path").attr("d","M6.5,5 l5,9 l-10,0 z").attr("fill","#333333")
 				  ;
-		legend.avg.append("p").style("float","left").text("Average");
+		legend.avg.append("p").style("float","left").text("Average for race/ethnicity");
 
 	legend.selected = legend.wrap.append("div").style("float","left").classed("c-fix",true);
 	legend.selected.append("div").style("width","46px").style("height","1.25em").style("float","left")
@@ -276,6 +276,17 @@ function main(){
 		var plot_layer = dom.svg.append("g");
 		var top_layer = dom.svg.append("g");
 
+		//source line
+		dom.wrap.append("div").style("width","100px").style("height","0px").style("border-top","1px solid #aaaaaa").style("margin","1em "+pctBounds[0]);
+		dom.wrap.append("p")
+				.text("Source: 2015 American Community Survey. Data are limited to the civilian population aged 18 to 64, not living in group quarters.")
+				.style("font-size","13px")
+				.style("font-style","italic")
+				.style("color","#666666")
+				.style("margin", "0em " + pctBounds[0])
+				;
+
+		dom.menu.style("margin", "0em " + pctBounds[0]);
 
 		//variable groupings: emp, unemp, nilf
 		var groups_update = plot_layer.selectAll("g").data(mapped);
@@ -344,13 +355,13 @@ function main(){
 			tickMarksLab.enter().append("text").classed("tick-mark",true).merge(tickMarksLab)
 				.attr("x", function(d,i){return d.x})
 				.attr("y", function(d){return groupHeight-7})
-				.text(function(d,i){return d.v})
+				.text(function(d,i){return d.v === 0 ? "0 (Avg.)" : d.v})
 				.attr("text-anchor","middle")
 				.style("font-size","13px")
 				;
 
 		lastAxisLayer.selectAll("text.xaxis-label")
-					 .data(["Distance from the average", "(number of standard deviations)"])
+					 .data(["Distance from the overall average", "(number of standard deviations)"])
 					 .enter()
 					 .append("text")
 					 .classed("xaxis-label",true)
@@ -512,6 +523,7 @@ function main(){
 				;
 
 			var currently_selected_geo = null;
+			var currently_selected_group = null;
 			function selectGeo(code, persistent, duration, isolate){
 				var dur = arguments.length > 2 ? duration : 500;
 				if(code===null){
@@ -637,10 +649,7 @@ function main(){
 								thiz.style("opacity",1);
 							})*/
 							;
-
-							place_name_groups.style("display", function(d,i){
-								return d.race==isolate[1] ? "inline" : "none"; //d.status==isolate[0] && 
-							});
+							currently_selected_group = isolate[1];
 					} else{
 						svgs.interrupt()
 							.style("opacity",1)
@@ -652,9 +661,11 @@ function main(){
 								return valScale(z) + "%"
 							})
 							;
+					}	
 
-							//place_name_groups.style("display", "none");
-					}				
+					place_name_groups.style("display", function(d,i){
+						return d.race==currently_selected_group ? "inline" : "none"; //d.status==isolate[0] && 
+					});			
 
 					/*vlabels.select("tspan.var-label-place").text(function(d,i){
 						return " / Highlighting " + geo_lookup[code];

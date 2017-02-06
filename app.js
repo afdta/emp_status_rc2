@@ -179,8 +179,28 @@ function main(){
 
 	options.filter(function(d,i){return i==0}).attr("disabled",true).attr("selected",true);
 
-	dom.legendWrap = dom.menu.append("div");
-	dom.legendWrap.append("p").text("To do: Add a legend (gray triangle is the mean for each race/ethnicity grouping). Add vertical grid lines?");
+	var cols = ["#e86e25", "#a91317", "#5ca86b", "#4d76b1", "#adc32b", "#88bbca"];
+	cols.background = "#fafafa";
+	var legend = {};
+	legend.wrap = dom.menu.append("div").style("float","left").style("margin","0.5em 0em").classed("c-fix",true);
+	legend.avg = legend.wrap.append("div").style("float","left").classed("c-fix",true).style("margin-right","1em");
+		legend.avg.append("div").style("width","16px").style("height","1.25em").style("float","left")
+				  .append("svg").attr("width","100%").attr("height","100%")
+				  .append("path").attr("d","M6.5,5 l5,9 l-10,0 z").attr("fill","#333333")
+				  ;
+		legend.avg.append("p").style("float","left").text("Average");
+
+	legend.selected = legend.wrap.append("div").style("float","left").classed("c-fix",true);
+	legend.selected.append("div").style("width","46px").style("height","1.25em").style("float","left")
+				  .append("svg").attr("width","100%").attr("height","100%")
+				  .selectAll("path").data(cols.slice(0,4)).enter()
+				  .append("path").attr("d",function(d,i){
+				  	return "M" + (6.5+(10*i)) + ",5 l5,9 l-10,0 z"
+				  }).attr("fill",function(d,i){return d})
+				  ;
+	legend.selectedGeo = legend.selected.append("p").style("float","left").text("Selected geography");
+
+
 
 	dom.svg = dom.wrap.append("svg").style("height","100%").style("width","100%");
 
@@ -194,8 +214,6 @@ function main(){
 	d3.json(fp, function(error, data){
 
 		var groups = ["White","Black","Latino","Asian"];
-		var cols = ['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33']; //credit: colorbrewer2.org
-		var cols = ["#e86e25", "#a91317", "#5ca86b", "#4d76b1", "#adc32b", "#88bbca"];
 
 		var order = {};
 		(function(){
@@ -269,7 +287,7 @@ function main(){
 			groups_enter.append("g").classed("vline_layer",true);
 			groups_enter.append("g").classed("label_layer",true).append("line").style("pointer-events","none");
 			groups_enter.append("g").classed("avg_layer",true).attr("transform","translate(-5,0)").style("pointer-events","none");
-			groups_enter.append("g").classed("anno_layer",true).attr("transform","translate(-105,0)").style("pointer-events","none");
+			groups_enter.append("g").classed("anno_layer",true).attr("transform","translate(-405,0)").style("pointer-events","none");
 
 		var groups = groups_enter.merge(groups_update)
 			.attr("transform",function(d,i){
@@ -405,7 +423,7 @@ function main(){
 						.attr("y",function(d){
 							return groupScale(d)+12;
 						})
-						.attr("fill","#fafafa")
+						.attr("fill",cols.background)
 						.attr("fill-opacity","1")
 						;
 
@@ -540,19 +558,16 @@ function main(){
 					});
 
 						svgs_u.exit().remove();
-					var svgs_e = svgs_u.enter().append("svg").attr("width","200px").attr("height","100px").attr("x","50%");
-						//svgs_e.append("rect").attr("width","3").attr("height","21").attr("x","1").attr("y","0")
-						//svgs_e.append("rect").attr("width","1").attr("height","21").attr("x","2").attr("y","0")
-						//svgs_e.append("rect").attr("width","3").attr("height","10").attr("x","1").attr("y",17);
-						
-						//svgs_e.append("rect").attr("height","10px").attr("width","300px").attr("fill","yellow").attr("x","6").attr("y","0");
-						//svgs_e.append("rect").attr("height","10px").attr("width","100px").attr("fill","brown").attr("x","6").attr("y","0").style("shape-rendering","crispEdges");
-						svgs_e.append("path").attr("d","M106.5,13 l5,9 l-10,0 z");
-						svgs_e.append("text").text("name").attr("x",113).attr("y",22).style("font-size","11px").text("Label");//.attr("fill","#666666");
+					var svgs_e = svgs_u.enter().append("svg").attr("width","800px").attr("height","100px").attr("x","50%");
+					var svgs_pn = svgs_e.append("g").classed("place_name",true).attr("transform","translate(0,22)");
+							//svgs_pn.append("rect").attr("width","50%").attr("height","22px").attr("x","0").attr("y","-22").attr("fill",cols.background).attr("stroke","red");
+							svgs_pn.append("text").text("X").attr("x",405).attr("y",0).attr("text-anchor","start").style("font-size","11px").text("Label");
+						svgs_e.append("path").attr("d","M406.5,38 l5,9 l-10,0 z");
+						svgs_e.append("text").classed("value",true).text("name").attr("x",413).attr("y",47).style("font-size","11px").text("Label");//.attr("fill","#666666");
 
 					var svgs = svgs_e.merge(svgs_u)
 									.attr("y", function(d,i){
-										return groupScale(d.race);
+										return groupScale(d.race) - 25;
 									});
 
 					svgs.select("path")
@@ -560,21 +575,51 @@ function main(){
 							return cols[order[d.value.race]];
 						});
 
-					svgs.select("text")
+					svgs.select("text.value")
 						.attr("text-anchor",function(d,i){
 							return d.above_average ? "start" : "end";
 						}).attr("x", function(d,i){
-							return d.above_average ? 113 : 100;
+							return d.above_average ? 413 : 400;
 						})
 						.text(function(d,i){
 							return format.sh1(d.value.share);
 						})
 						;
 
+					var place = geo_lookup[code];
+					legend.selectedGeo.text(place);
+
+					var place_name_groups = svgs.select("g.place_name");
+					var place_names = place_name_groups.selectAll("text").data(function(d,i){
+							var ta = d.above_average ? "start" : "end";
+							return [{p:place, ta:ta}, {p:place, ta:ta}]
+						});
+						place_names.exit().remove();
+						place_names.enter().append("text").merge(place_names)
+						.attr("text-anchor", function(d,i){
+							return d.ta;
+						})
+						.attr("fill",function(d,i){
+							return i==0 ? cols.background : null;
+						})
+						.attr("stroke", cols.background)
+						.attr("stroke-width", function(d,i){
+							return i==0 ? 4 : 0;
+						})
+						.attr("x",405)
+						.attr("y",1)
+						.style("font-size","11px")
+						.text(function(d,i){return d.p})
+						;
+
+
 					if(!!isolate){
 						svgs.interrupt()
 							.style("opacity",function(d,i){
 								return d.status==isolate[0] && d.race==isolate[1] ? 1 : 0;
+							})
+							.attr("x", function(d,i){
+								return d.x + "%";
 							})
 							.transition()
 							.delay(function(d,i){
@@ -592,6 +637,10 @@ function main(){
 								thiz.style("opacity",1);
 							})*/
 							;
+
+							place_name_groups.style("display", function(d,i){
+								return d.race==isolate[1] ? "inline" : "none"; //d.status==isolate[0] && 
+							});
 					} else{
 						svgs.interrupt()
 							.style("opacity",1)
@@ -603,6 +652,8 @@ function main(){
 								return valScale(z) + "%"
 							})
 							;
+
+							//place_name_groups.style("display", "none");
 					}				
 
 					/*vlabels.select("tspan.var-label-place").text(function(d,i){

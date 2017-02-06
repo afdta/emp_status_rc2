@@ -16,6 +16,10 @@
 	max-width:100%;
 }
 
+.m-i p{
+	margin:0em;
+}
+
 @media (min-width:0px){
 	.m-i .margin-15{margin:1em;}
 }

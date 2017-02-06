@@ -11,13 +11,14 @@
 	outline:none;
 	background:none;
 	background-color:transparent;
-	padding:0.5em 1em 0.5em 1em;
+	padding:0.35em 0.5em 0.25em 0.5em;
 	border:1px solid #aaaaaa;
 	max-width:100%;
+	font-size:1em;
 }
 
 .m-i p{
-	margin:0em;
+	margin:0em 0em 0em 0em;
 }
 
 @media (min-width:0px){

@@ -28,12 +28,17 @@ function main(){
 		.classed("m-i makesans",true)
 		;
 
-	dom.menu = dom.wrap.append("div").classed("c-fix",true);
+	dom.titlebox = dom.wrap.append("div");
+		dom.titlebox.append("p").style("font-size","0.8em").text("INTERACTIVE DATA").style("margin","0em");
+		dom.titlebox.append("p").style("font-size","1.5em").style("font-weight","bold").text("Share of the working age population that is employed, unemployed, or not in the labor force").style("margin","0.25em 0em");
+		dom.titlebox.append("p").style("font-size","1em").text("By race, in cities and counties with at least 500,000 residents, 2015").style("margin","0em");
+
+	dom.menu = dom.titlebox.append("div").classed("c-fix",true).style("margin","1.5em 0em 0em 0em");
 	
-	dom.selectWrap = dom.menu.append("div");
+	dom.selectWrap = dom.menu.append("div").style("float","left").style("margin-right","2em");
 	dom.select = dom.selectWrap.append("select");
 	var options = dom.select.selectAll("option")
-							.data([{fips:"99999", name:"Select a geography"}].concat(geos))
+							.data([{fips:"99999", name:"Select a jurisdiction"}].concat(geos))
 							.enter()
 							.append("option")
 							.attr("value",function(d,i){return d.fips})
@@ -61,7 +66,7 @@ function main(){
 				  	return "M" + (6.5+(10*i)) + ",5 l5,9 l-10,0 z"
 				  }).attr("fill",function(d,i){return d})
 				  ;
-	legend.selectedGeo = legend.selected.append("p").style("float","left").text("Selected geography");
+	legend.selectedGeo = legend.selected.append("p").style("float","left").text("Selected jurisdiction");
 
 
 
@@ -150,7 +155,7 @@ function main(){
 				.style("margin", "0em " + pctBounds[0])
 				;
 
-		dom.menu.style("margin", "0em " + pctBounds[0]);
+		dom.titlebox.style("margin", "0em " + pctBounds[0]);
 
 		//variable groupings: emp, unemp, nilf
 		var groups_update = plot_layer.selectAll("g").data(mapped);

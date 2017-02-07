@@ -50,7 +50,7 @@ function main(){
 	var cols = ["#e86e25", "#a91317", "#5ca86b", "#4d76b1", "#adc32b", "#88bbca"];
 	cols.background = "#fafafa";
 	var legend = {};
-	legend.wrap = dom.menu.append("div").style("float","left").style("margin","0.5em 0em").classed("c-fix",true);
+	legend.wrap = dom.menu.append("div").style("float","left").style("clear","both").style("margin","0.5em 0em").classed("c-fix",true);
 	legend.avg = legend.wrap.append("div").style("float","left").classed("c-fix",true).style("margin-right","1em");
 		legend.avg.append("div").style("width","16px").style("height","1.25em").style("float","left")
 				  .append("svg").attr("width","100%").attr("height","100%")
@@ -73,7 +73,7 @@ function main(){
 	dom.svg = dom.wrap.append("svg").style("height","100%").style("width","100%");
 
 	dom.plotgroup = {};
-	dom.plotgroup.height = 29; //height of a single line of dots
+	dom.plotgroup.height = 27; //height of a single line of dots
 	dom.plotgroup.pad = 60;
 
 	//variables
@@ -90,7 +90,6 @@ function main(){
 				order[groups[i]] = i;
 			}
 		})();
-
 
 		var rollup = d3.nest().key(function(d){
 							return d.race;
@@ -114,50 +113,38 @@ function main(){
 							};
 						});*/
 
-		var extent = [-1,1];
-
 		//need to rollup the data
 		var mapped = vars.map(function(d,i,a){
 			var obs = data.obs[d.code];
 			var avg = data.avg[d.code];
-			var max = d3.max(obs, function(d){return d.z});
-			var min = d3.min(obs, function(d,i){return d.z});
-			if(min < extent[0]){extent[0] = min}
-			if(max > extent[1]){extent[1] = max}
-			return {var:d, obs:rollup.entries(obs), avg:rollup.entries(avg)};
+			var extent = d3.extent(obs, function(d){return d.share});
+			var valScale = d3.scaleLinear().domain(extent).range([10,90]);
+			var ticks = valScale.ticks(6).map(function(d){
+				return {v:d, x:valScale(d)+"%"}
+			});
+
+			return {var:d, obs:rollup.entries(obs), avg:rollup.entries(avg), scale:valScale, ticks:ticks};
 		});
 
 		var groupHeight = (groups.length*dom.plotgroup.height) + (dom.plotgroup.pad*2);
 			dom.svg.style("height",((groupHeight*3)+120)+"px");
 		var groupScale = d3.scaleBand().domain(groups).range([0,groupHeight]).round(true).paddingOuter(0.75).paddingInner(0.5);
-		var valScale = d3.scaleLinear().domain(extent).range([5,95]);
-
-		var pctBounds = [valScale(-3.5)+"%", valScale(3.5)+"%"];
-		var pctBounds2 = [valScale(-3.25)+"%", valScale(3.25)+"%"];
-
-		var ticks = valScale.ticks(6);
-			ticks.pop();
-		var ticks2 = ticks.map(function(d){
-				return {v:d, x:valScale(d)+"%"}
-			});
+		
+		var pctBounds = ["5%", "95%"];
+		var pctBounds2 = ["15%", "85%"];
 
 		var bottom_layer = dom.svg.append("g");
 		var plot_layer = dom.svg.append("g");
 		var top_layer = dom.svg.append("g");
 
 		//source line
-		dom.wrap.append("div").style("width","100px").style("height","0px").style("border-top","1px solid #aaaaaa").style("margin","0em "+pctBounds[0]+" 0.5em "+pctBounds[0]);
+		dom.wrap.append("div").style("width","100px").style("height","0px").style("border-top","1px solid #aaaaaa").style("margin","0em "+pctBounds2[0]+" 0.5em "+pctBounds2[0]);
 		dom.wrap.append("p").classed("m-i-footer",true)
 				.text("Source: 2015 American Community Survey. Data are limited to the civilian population aged 18 to 64, not living in group quarters.")
-				.style("margin", "0em " + pctBounds[0])
+				.style("margin", "0em " + pctBounds2[0])
 				;
 
-		dom.wrap.append("p").classed("m-i-footer",true)
-				.text("*For each indicator, the standardized value for a jurisdiction equals the actual value minus the average for that indicator across all jurisdictions and races/ethnicities, divided by the standard deviation of these values. By definition, a standardized value of zero equals the average for the relevant indicator across all races/ethnicities and jurisdictions.")
-				.style("margin", "0.5em " + pctBounds[0])
-				;
-
-		dom.titlebox.style("margin", "0em " + pctBounds[0]);
+		dom.titlebox.style("margin", "0em " + pctBounds2[0]);
 
 		//variable groupings: emp, unemp, nilf
 		var groups_update = plot_layer.selectAll("g").data(mapped);
@@ -173,7 +160,7 @@ function main(){
 
 		var groups = groups_enter.merge(groups_update)
 			.attr("transform",function(d,i){
-				return "translate(0," + ((i*(groupHeight+15))+30) + ")"
+				return "translate(0," + ((i*(groupHeight+30))+50) + ")"
 			});
 
 		//horizontal axes
@@ -194,13 +181,15 @@ function main(){
 
 		//vertical axes
 		var vlineLayer = groups.select("g.vline_layer");
-		var vlines = vlineLayer.selectAll("line.vaxis").data(ticks2);
+		var vlines = vlineLayer.selectAll("line.vaxis").data(function(d,i){
+			return d.ticks;
+		});
 			vlines.exit().remove();
 			vlines.enter().append("line").classed("vaxis",true).merge(vlines)
 				.attr("x1", function(d,i){return d.x})
 				.attr("x2", function(d,i){return d.x})
 				.attr("y1", function(d){return 7})
-				.attr("y2", function(d){return groupHeight-25})
+				.attr("y2", function(d){return groupHeight-35})
 				.attr("stroke","#aaaaaa")
 				.attr("stroke-width","1")
 				.attr("stroke-dasharray","2,3")
@@ -208,30 +197,34 @@ function main(){
 				;
 
 		//tick marks
-		var lastAxisLayer = vlineLayer.filter(function(d,i){return i==2});
-		var tickMarks = lastAxisLayer.selectAll("line.tick-mark").data(ticks2);
+		var tickMarks = vlineLayer.selectAll("line.tick-mark").data(function(d,i){
+			return d.ticks;
+			});
+
 			tickMarks.exit().remove();
 			tickMarks.enter().append("line").classed("tick-mark",true).merge(tickMarks)
 				.attr("x1", function(d,i){return d.x})
 				.attr("x2", function(d,i){return d.x})
-				.attr("y1", function(d){return groupHeight-26})
-				.attr("y2", function(d){return groupHeight-20})
+				.attr("y1", function(d){return groupHeight-36})
+				.attr("y2", function(d){return groupHeight-30})
 				.attr("stroke","#333333")
 				.attr("stroke-width","1")
 				.style("shape-rendering","crispEdges")
 				;
 
-		var tickMarksLab = lastAxisLayer.selectAll("text.tick-mark").data(ticks2);
+		var tickMarksLab = vlineLayer.selectAll("text.tick-mark").data(function(d,i){
+			return d.ticks;
+			});
 			tickMarksLab.exit().remove();
 			tickMarksLab.enter().append("text").classed("tick-mark",true).merge(tickMarksLab)
 				.attr("x", function(d,i){return d.x})
-				.attr("y", function(d){return groupHeight-7})
-				.text(function(d,i){return d.v === 0 ? "0 (Avg.)" : d.v})
+				.attr("y", function(d){return groupHeight-17})
+				.text(function(d,i){return format.sh0(d.v);})
 				.attr("text-anchor","middle")
 				.style("font-size","13px")
 				;
 
-		lastAxisLayer.selectAll("text.xaxis-label")
+		/*tickMarksLab.selectAll("text.xaxis-label")
 					 .data(["Standardized values*"])
 					 .enter()
 					 .append("text")
@@ -243,7 +236,7 @@ function main(){
 					 .attr("text-anchor","middle")
 					 .text(function(d,i){return d})
 					 .style("font-size","13px")
-					 ;
+					 ;*/
 
 
 		//labels
@@ -254,7 +247,7 @@ function main(){
 		});
 		labels.exit().remove();
 		labels.enter().append("text").classed("group-label",true).merge(labels)
-		.attr("x", valScale(0)+"%")
+		.attr("x", "50%")
 		.attr("y", function(d){return groupScale(d.key)-2})
 		.attr("text-anchor","middle")
 		.text(function(d){return d.key.toUpperCase()})
@@ -273,7 +266,7 @@ function main(){
 			   .append("text")
 			   .classed("var-label",true)
 			   .merge(vlabels)
-			   .attr("x", valScale(0)+"%")
+			   .attr("x", "50%")
 			   //.attr("x","15%")
 			   .attr("dx","0")
 			   .attr("y", "0")
@@ -315,7 +308,11 @@ function main(){
 		var places = groups.select("g.place_layer")
 			.selectAll("g")
 			.data(function(d,i){
-				return d.obs;
+				var valScale = d.scale;
+				return d.obs.map(function(d,i){
+					d.scale = valScale;
+					return d;
+				});
 			});
 
 			places.exit().remove();
@@ -323,11 +320,17 @@ function main(){
 						.append("g")
 						.merge(places)
 						.attr("transform",function(d,i){return "translate(0," + groupScale(d.key) + ")"})
-						.selectAll("rect").data(function(d,i){return d.values});
+						.selectAll("rect").data(function(d,i){
+							var valScale = d.scale;
+							return d.values.map(function(d,i){
+								d.scale = valScale;
+								return d;
+							})
+						});
 		dots.exit().remove();
 		var D = dots.enter().append("rect").merge(dots)
 			//.attr("r",3)
-			.attr("x",valScale(0)+"%")
+			.attr("x","50%")
 			.attr("width","3px")
 			.attr("height","24px")
 			.attr("y",0)
@@ -358,19 +361,23 @@ function main(){
 			})
 			.duration(700)
 			.attr("x", function(d,i){
-				if(d.z===null){
+				if(d.share===null){
 					//console.log("Missing value: " + JSON.stringify(d));
 					return "-100%"
 				}
 				else{
-					return valScale(d.z) + "%";
+					return d.scale(d.share) + "%";
 				}
 			});
 
 			//nested svg
 			var avg_u = groups.select("g.avg_layer").selectAll("svg")
 				.data(function(d,i){
-					return d.avg;
+					var valScale = d.scale;
+					return d.avg.map(function(d,i){
+						d.scale = valScale;
+						return d;
+					});
 				});
 
 			var avg_e = avg_u.enter().append("svg")
@@ -383,8 +390,8 @@ function main(){
 
 			avg_e.merge(avg_u)
 				.attr("x", function(d,i){
-					var avg = d.values[0].avg;
-					return valScale(avg) + "%"
+					var avg = d.values[0].avg_share;
+					return d.scale(avg) + "%"
 				}).attr("y", function(d,i){
 					return groupScale(d.key);
 				})
@@ -411,12 +418,13 @@ function main(){
 						(function(){
 							var i = -1;
 							while(++i < d.avg.length){
-								averages[d.avg[i].key] = d.avg[i].values[0].avg;
+								averages[d.avg[i].key] = d.avg[i].values[0].avg_share;
 							}
 						})();
 
 						//emp, unemp, nilf
 						var status = d.var.code;
+						var valScale = d.scale;
 
 						//look through the observations by race, filter the value for the selected geo code
 						var m = d.obs.map(function(d,i){
@@ -424,12 +432,12 @@ function main(){
 							r.race = d.key;
 							r.status = status;
 							var vals = d.values.filter(function(d,i){
-								return d.fips === code && d.z !== null;
+								return d.fips === code && d.share !== null;
 							});
 							r.value = vals.length > 0 && vals[0].fips === code ? vals[0] : null;
-							r.x = r.value !== null ? valScale(r.value.z) : 0;
+							r.x = r.value !== null ? valScale(r.value.share) : 0;
 							
-							r.above_average = r.value === null || r.value.z >= averages[r.race];
+							r.above_average = r.value === null || r.value.share >= averages[r.race];
 
 							if(r.x > 80 || r.x < 20){r.above_average = !r.above_average}
 
@@ -530,8 +538,7 @@ function main(){
 							.duration(dur)
 							.style("opacity",1)
 							.attr("x", function(d,i){
-								var z = d.value.z;
-								return valScale(z) + "%"
+								return d.x + "%"
 							})
 							;
 					}	
@@ -596,26 +603,6 @@ function main(){
 			else{
 				dom.select.remove();
 			}
-			/*var avg_dots = groups.select("g.avg_layer")
-			.selectAll("circle")
-			.data(function(d,i){
-				return d.avg;
-			});
-
-			avgs.enter().append("circle").merge(avgs)
-			.attr("cx", function(d,i){
-				var avg = d.values[0].avg;
-				return valScale(avg) + "%"
-			})
-			.attr("transform","translate(1.5,0)")
-			.attr("cy", function(d,i){
-				return groupScale(d.key)+20;
-			})
-			.attr("stroke","#eeeeee")
-			.attr("stroke-width",0)
-			.attr("fill","#333333")
-			.attr("r",3)
-			;*/
 
 	});
 }

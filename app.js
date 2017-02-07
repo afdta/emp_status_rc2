@@ -160,7 +160,6 @@ function main(){
 	var dom = {};
 	dom.wrap = d3.select("#employment-status-wrap")
 		.style("width","100%")
-		.style("max-width","1600px")
 		.style("margin","1em auto")
 		.style("min-height","500px")
 		.classed("m-i makesans",true)

@@ -56,7 +56,7 @@ function main(){
 				  .append("svg").attr("width","100%").attr("height","100%")
 				  .append("path").attr("d","M6.5,5 l5,9 l-10,0 z").attr("fill","#333333")
 				  ;
-		legend.avg.append("p").style("float","left").text("Average for race/ethnicity");
+		legend.avg.append("p").style("float","left").text("Average for race/ethnicity across all jurisdictions");
 
 	legend.selected = legend.wrap.append("div").style("float","left").classed("c-fix",true);
 	legend.selected.append("div").style("width","46px").style("height","1.25em").style("float","left")
@@ -146,13 +146,15 @@ function main(){
 		var top_layer = dom.svg.append("g");
 
 		//source line
-		dom.wrap.append("div").style("width","100px").style("height","0px").style("border-top","1px solid #aaaaaa").style("margin","1em "+pctBounds[0]);
-		dom.wrap.append("p")
+		dom.wrap.append("div").style("width","100px").style("height","0px").style("border-top","1px solid #aaaaaa").style("margin","0em "+pctBounds[0]+" 0.5em "+pctBounds[0]);
+		dom.wrap.append("p").classed("m-i-footer",true)
 				.text("Source: 2015 American Community Survey. Data are limited to the civilian population aged 18 to 64, not living in group quarters.")
-				.style("font-size","13px")
-				.style("font-style","italic")
-				.style("color","#666666")
 				.style("margin", "0em " + pctBounds[0])
+				;
+
+		dom.wrap.append("p").classed("m-i-footer",true)
+				.text("*For each indicator, the standardized value for a jurisdiction equals the actual value minus the average for that indicator across all jurisdictions and races/ethnicities, divided by the standard deviation of these values. By definition, a standardized value of zero equals the average for the relevant indicator across all races/ethnicities and jurisdictions.")
+				.style("margin", "0.5em " + pctBounds[0])
 				;
 
 		dom.titlebox.style("margin", "0em " + pctBounds[0]);
@@ -230,7 +232,7 @@ function main(){
 				;
 
 		lastAxisLayer.selectAll("text.xaxis-label")
-					 .data(["Distance from the overall average", "(number of standard deviations)"])
+					 .data(["Standardized values*"])
 					 .enter()
 					 .append("text")
 					 .classed("xaxis-label",true)
@@ -445,7 +447,7 @@ function main(){
 					var svgs_pn = svgs_e.append("g").classed("place_name",true).attr("transform","translate(0,22)");
 							//svgs_pn.append("rect").attr("width","50%").attr("height","22px").attr("x","0").attr("y","-22").attr("fill",cols.background).attr("stroke","red");
 							svgs_pn.append("text").text("X").attr("x",405).attr("y",0).attr("text-anchor","start").style("font-size","11px").text("Label");
-						svgs_e.append("path").attr("d","M406.5,38 l5,9 l-10,0 z");
+						svgs_e.append("path").attr("d","M406.5,36 l7,12 l-14,0 z").attr("stroke","#ffffff").attr("stroke-width","2");
 						svgs_e.append("text").classed("value",true).text("name").attr("x",413).attr("y",47).style("font-size","11px").text("Label");//.attr("fill","#666666");
 
 					var svgs = svgs_e.merge(svgs_u)

@@ -530,7 +530,7 @@ function main(){
 				//avg_e.append("rect").attr("width","3").attr("height","20").attr("x","1").attr("y",0);
 				avg_e.append("rect").attr("width","5").attr("height","9").attr("x","204").attr("y",4).attr("fill",cols.background).style("shape-rendering","crispEdges");
 				avg_e.append("rect").attr("width","3").attr("height","8").attr("x","205").attr("y",5).attr("fill","#333333").style("shape-rendering","crispEdges");
-				avg_e.append("text").attr("x","206.5").attr("y","23").style("font-size","13px").attr("text-anchor","middle").attr("fill","#666666");
+				avg_e.append("text").attr("x","206.5").attr("y","23").style("font-size","13px").attr("text-anchor","middle");
 				//avg_e.append("circle").attr("cx","6.5").attr("cy","10").attr("fill","#333333").attr("r","3").attr("stroke","#ffffff").attr("stroke-width","1.5"); 
 				//avg_e.append("circle").attr("cx","6.5").attr("cy","10").attr("fill","#333333").attr("r","3").attr("stroke","#ffffff").attr("stroke-width","1.5"); 
 				//avg_e.append("path").attr("d","M6.5,13 l5,9 l-10,0 z");

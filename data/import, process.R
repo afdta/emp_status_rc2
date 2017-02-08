@@ -3,7 +3,7 @@ library("ggplot2")
 library("tidyr")
 library("jsonlite")
 
-dat <- read.csv("/home/alec/Projects/Brookings/employment-status/data/interactive_data_oct21.csv", stringsAsFactors=FALSE, na.strings=c(""," ","NA"))
+dat <- read.csv("/home/alec/Projects/Brookings/employment-status/data/interactive_data_feb7.csv", stringsAsFactors=FALSE, na.strings=c(""," ","NA"))
 
 tidy <- dat %>% gather(status, count, Employed:NILF)
 tidy$share <- tidy$count/tidy$Total

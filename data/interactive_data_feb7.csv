@@ -1,0 +1,908 @@
+FIPS, Name , Race ,Total,Employed,Unemployed,NILF
+01073c," Jefferson County, AL ", All other non-Hispanic ,3426,1959,,
+01073c," Jefferson County, AL ", Latino ,14544,12072,,1665
+01073c," Jefferson County, AL ", Non-Hispanic American Indian ,,,,
+01073c," Jefferson County, AL ", Non-Hispanic Asian ,7177,5772,,1271
+01073c," Jefferson County, AL ", Non-Hispanic black ,172804,115105,13076,44623
+01073c," Jefferson County, AL ", Non-Hispanic white ,199806,150887,7307,41612
+01073c," Jefferson County, AL ", Total ,398897,286542,22023,90332
+04013a," Phoenix, AZ ", All other non-Hispanic ,16288,11669,,3423
+04013a," Phoenix, AZ ", Latino ,393582,265032,17786,110764
+04013a," Phoenix, AZ ", Non-Hispanic American Indian ,14707,10450,,3005
+04013a," Phoenix, AZ ", Non-Hispanic Asian ,30123,20942,,7965
+04013a," Phoenix, AZ ", Non-Hispanic black ,64745,40950,4688,19107
+04013a," Phoenix, AZ ", Non-Hispanic white ,393372,291531,15693,86148
+04013a," Phoenix, AZ ", Total ,912817,640574,41831,230412
+04013b," Maricopa County (excluding Phoenix), AZ ", All other non-Hispanic ,27606,20015,1656,5935
+04013b," Maricopa County (excluding Phoenix), AZ ", Latino ,356313,264580,12617,79116
+04013b," Maricopa County (excluding Phoenix), AZ ", Non-Hispanic American Indian ,26710,17632,1846,7232
+04013b," Maricopa County (excluding Phoenix), AZ ", Non-Hispanic Asian ,89982,61536,2482,25964
+04013b," Maricopa County (excluding Phoenix), AZ ", Non-Hispanic black ,70221,54288,3831,12102
+04013b," Maricopa County (excluding Phoenix), AZ ", Non-Hispanic white ,1017976,763575,37643,216758
+04013b," Maricopa County (excluding Phoenix), AZ ", Total ,1588808,1181626,60075,347107
+040143c," Tulsa County, AZ ", All other non-Hispanic ,26521,20255,2270,3996
+040143c," Tulsa County, AZ ", Latino ,43945,31770,2225,9950
+040143c," Tulsa County, AZ ", Non-Hispanic American Indian ,22325,15537,,6249
+040143c," Tulsa County, AZ ", Non-Hispanic Asian ,11802,8057,,3580
+040143c," Tulsa County, AZ ", Non-Hispanic black ,41456,26767,3143,11546
+040143c," Tulsa County, AZ ", Non-Hispanic white ,277396,210642,9284,57470
+040143c," Tulsa County, AZ ", Total ,423445,313028,17626,92791
+04019c," Pima County, AZ ", All other non-Hispanic ,9910,5021,2314,2575
+04019c," Pima County, AZ ", Latino ,215735,150209,15655,49871
+04019c," Pima County, AZ ", Non-Hispanic American Indian ,15768,8801,3061,3906
+04019c," Pima County, AZ ", Non-Hispanic Asian ,19659,12783,,6278
+04019c," Pima County, AZ ", Non-Hispanic black ,19993,12853,1609,5531
+04019c," Pima County, AZ ", Non-Hispanic white ,295557,202744,12945,79868
+04019c," Pima County, AZ ", Total ,576622,392411,36182,148029
+06001c," Alameda County, CA ", All other non-Hispanic ,34697,25940,2188,6569
+06001c," Alameda County, CA ", Latino ,230176,173063,8328,48785
+06001c," Alameda County, CA ", Non-Hispanic American Indian ,3195,2068,,1103
+06001c," Alameda County, CA ", Non-Hispanic Asian ,328266,239659,12132,76475
+06001c," Alameda County, CA ", Non-Hispanic black ,116759,79802,8924,28033
+06001c," Alameda County, CA ", Non-Hispanic white ,346408,272193,10418,63797
+06001c," Alameda County, CA ", Total ,1059501,792725,42014,224762
+06013c," Contra Costa County, CA ", All other non-Hispanic ,28279,19281,2281,6717
+06013c," Contra Costa County, CA ", Latino ,175005,126861,9675,38469
+06013c," Contra Costa County, CA ", Non-Hispanic American Indian ,1512,,,
+06013c," Contra Costa County, CA ", Non-Hispanic Asian ,121270,87475,3839,29956
+06013c," Contra Costa County, CA ", Non-Hispanic black ,61846,40302,6644,14900
+06013c," Contra Costa County, CA ", Non-Hispanic white ,307550,231454,13640,62456
+06013c," Contra Costa County, CA ", Total ,695462,506330,36225,152907
+06019c," Fresno County, CA ", All other non-Hispanic ,10787,6550,,3617
+06019c," Fresno County, CA ", Latino ,292857,195021,21367,76469
+06019c," Fresno County, CA ", Non-Hispanic American Indian ,2276,1297,,930
+06019c," Fresno County, CA ", Non-Hispanic Asian ,60722,36730,5982,18010
+06019c," Fresno County, CA ", Non-Hispanic black ,27522,14557,3643,9322
+06019c," Fresno County, CA ", Non-Hispanic white ,176292,120646,8412,47234
+06019c," Fresno County, CA ", Total ,570456,374801,40073,155582
+06029c," Kern County, CA ", All other non-Hispanic ,7430,4435,,1936
+06029c," Kern County, CA ", Latino ,259360,171471,23300,64589
+06029c," Kern County, CA ", Non-Hispanic American Indian ,2318,1487,,
+06029c," Kern County, CA ", Non-Hispanic Asian ,25245,18063,,6126
+06029c," Kern County, CA ", Non-Hispanic black ,24428,13026,2465,8937
+06029c," Kern County, CA ", Non-Hispanic white ,184203,120531,11732,51940
+06029c," Kern County, CA ", Total ,502984,329013,39806,134165
+06037a," Los Angeles, CA ", All other non-Hispanic ,55436,41580,4113,9743
+06037a," Los Angeles, CA ", Latino ,1244721,886384,67804,290533
+06037a," Los Angeles, CA ", Non-Hispanic American Indian ,4550,2456,,1486
+06037a," Los Angeles, CA ", Non-Hispanic Asian ,313154,222133,12612,78409
+06037a," Los Angeles, CA ", Non-Hispanic black ,241158,153676,21176,66306
+06037a," Los Angeles, CA ", Non-Hispanic white ,728946,541894,36133,150919
+06037a," Los Angeles, CA ", Total ,2587965,1848123,142446,597396
+06037b," Los Angeles County (excluding Los Angeles), CA ", All other non-Hispanic ,70555,50133,3828,16594
+06037b," Los Angeles County (excluding Los Angeles), CA ", Latino ,1868918,1299826,99382,469710
+06037b," Los Angeles County (excluding Los Angeles), CA ", Non-Hispanic American Indian ,10187,6265,,3745
+06037b," Los Angeles County (excluding Los Angeles), CA ", Non-Hispanic Asian ,673119,478422,25347,169350
+06037b," Los Angeles County (excluding Los Angeles), CA ", Non-Hispanic black ,271524,178006,21548,71970
+06037b," Los Angeles County (excluding Los Angeles), CA ", Non-Hispanic white ,993497,707058,48158,238281
+06037b," Los Angeles County (excluding Los Angeles), CA ", Total ,3887800,2719710,198440,969650
+06059c," Orange County, CA ", All other non-Hispanic ,45798,33246,2080,10472
+06059c," Orange County, CA ", Latino ,675884,505047,31742,139095
+06059c," Orange County, CA ", Non-Hispanic American Indian ,3247,1636,,1312
+06059c," Orange County, CA ", Non-Hispanic Asian ,415708,287896,14419,113393
+06059c," Orange County, CA ", Non-Hispanic black ,33716,25624,2105,5987
+06059c," Orange County, CA ", Non-Hispanic white ,812638,613435,31486,167717
+06059c," Orange County, CA ", Total ,1986991,1466884,82131,437976
+06065c," Riverside County, CA ", All other non-Hispanic ,31257,19277,2359,9621
+06065c," Riverside County, CA ", Latino ,678698,458425,46255,174018
+06065c," Riverside County, CA ", Non-Hispanic American Indian ,7170,2935,1728,2507
+06065c," Riverside County, CA ", Non-Hispanic Asian ,97823,60984,5052,31787
+06065c," Riverside County, CA ", Non-Hispanic black ,85991,56236,8331,21424
+06065c," Riverside County, CA ", Non-Hispanic white ,495789,321094,33199,141496
+06065c," Riverside County, CA ", Total ,1396728,918951,96924,380853
+06067c," Sacramento County, CA ", All other non-Hispanic ,38204,23782,3474,10948
+06067c," Sacramento County, CA ", Latino ,202638,138613,13752,50273
+06067c," Sacramento County, CA ", Non-Hispanic American Indian ,3560,2160,,
+06067c," Sacramento County, CA ", Non-Hispanic Asian ,157463,108014,8748,40701
+06067c," Sacramento County, CA ", Non-Hispanic black ,89523,53920,7118,28485
+06067c," Sacramento County, CA ", Non-Hispanic white ,431875,306369,23067,102439
+06067c," Sacramento County, CA ", Total ,923263,632858,56415,233990
+06071c," San Bernardino County, CA ", All other non-Hispanic ,25563,18266,2145,5152
+06071c," San Bernardino County, CA ", Latino ,657878,440208,43716,173954
+06071c," San Bernardino County, CA ", Non-Hispanic American Indian ,3720,2123,,
+06071c," San Bernardino County, CA ", Non-Hispanic Asian ,99609,68671,3074,27864
+06071c," San Bernardino County, CA ", Non-Hispanic black ,93791,57243,9365,27183
+06071c," San Bernardino County, CA ", Non-Hispanic white ,383951,256242,23585,104124
+06071c," San Bernardino County, CA ", Total ,1264512,842753,82449,339310
+06073c," San Diego County, CA ", All other non-Hispanic ,64523,41819,5873,16831
+06073c," San Diego County, CA ", Latino ,670869,484860,36278,149731
+06073c," San Diego County, CA ", Non-Hispanic American Indian ,6742,3298,,3088
+06073c," San Diego County, CA ", Non-Hispanic Asian ,263902,190495,8900,64507
+06073c," San Diego County, CA ", Non-Hispanic black ,95610,68488,7143,19979
+06073c," San Diego County, CA ", Non-Hispanic white ,930466,686973,40604,202889
+06073c," San Diego County, CA ", Total ,2032112,1475933,99154,457025
+06075a," San Francisco, CA ", All other non-Hispanic ,19992,16006,,3445
+06075a," San Francisco, CA ", Latino ,89857,72202,2303,15352
+06075a," San Francisco, CA ", Non-Hispanic American Indian ,,,,
+06075a," San Francisco, CA ", Non-Hispanic Asian ,205398,155101,10654,39643
+06075a," San Francisco, CA ", Non-Hispanic black ,26478,13968,3194,9316
+06075a," San Francisco, CA ", Non-Hispanic white ,261643,220196,8478,32969
+06075a," San Francisco, CA ", Total ,604227,478263,25239,100725
+06077c," San Joaquin County, CA ", All other non-Hispanic ,15311,9348,,4703
+06077c," San Joaquin County, CA ", Latino ,167804,108822,14582,44400
+06077c," San Joaquin County, CA ", Non-Hispanic American Indian ,,,,
+06077c," San Joaquin County, CA ", Non-Hispanic Asian ,67822,40698,5449,21675
+06077c," San Joaquin County, CA ", Non-Hispanic black ,30969,17804,2458,10707
+06077c," San Joaquin County, CA ", Non-Hispanic white ,145332,101676,9055,34601
+06077c," San Joaquin County, CA ", Total ,428380,279071,33043,116266
+06081c," San Mateo County, CA ", All other non-Hispanic ,13729,10595,,2687
+06081c," San Mateo County, CA ", Latino ,120923,92411,6513,21999
+06081c," San Mateo County, CA ", Non-Hispanic American Indian ,,,,
+06081c," San Mateo County, CA ", Non-Hispanic Asian ,149129,116011,6968,26150
+06081c," San Mateo County, CA ", Non-Hispanic black ,11780,8248,,2232
+06081c," San Mateo County, CA ", Non-Hispanic white ,186173,147761,6034,32378
+06081c," San Mateo County, CA ", Total ,482346,375638,21262,85446
+06085c," Santa Clara County, CA ", All other non-Hispanic ,31363,23446,1500,6417
+06085c," Santa Clara County, CA ", Latino ,308026,233185,14561,60280
+06085c," Santa Clara County, CA ", Non-Hispanic American Indian ,2061,,,
+06085c," Santa Clara County, CA ", Non-Hispanic Asian ,449190,332387,18569,98234
+06085c," Santa Clara County, CA ", Non-Hispanic black ,29317,22344,1899,5074
+06085c," Santa Clara County, CA ", Non-Hispanic white ,392391,303226,15052,74113
+06085c," Santa Clara County, CA ", Total ,1212348,916337,51581,244430
+06099c," Stanislaus County, CA ", All other non-Hispanic ,7788,4414,,1965
+06099c," Stanislaus County, CA ", Latino ,141040,90165,14197,36678
+06099c," Stanislaus County, CA ", Non-Hispanic American Indian ,1555,,,
+06099c," Stanislaus County, CA ", Non-Hispanic Asian ,21701,14350,1225,6126
+06099c," Stanislaus County, CA ", Non-Hispanic black ,8627,5575,,2200
+06099c," Stanislaus County, CA ", Non-Hispanic white ,142082,88684,9353,44045
+06099c," Stanislaus County, CA ", Total ,322793,203970,27176,91647
+06111c," Ventura County, CA ", All other non-Hispanic ,9695,6155,,3251
+06111c," Ventura County, CA ", Latino ,218203,161634,11357,45212
+06111c," Ventura County, CA ", Non-Hispanic American Indian ,,,,
+06111c," Ventura County, CA ", Non-Hispanic Asian ,41510,29121,1674,10715
+06111c," Ventura County, CA ", Non-Hispanic black ,10548,8741,,1333
+06111c," Ventura County, CA ", Non-Hispanic white ,239055,177956,10905,50194
+06111c," Ventura County, CA ", Total ,519659,383960,24751,110948
+08031a," Denver, CO ", All other non-Hispanic ,10959,7837,,2391
+08031a," Denver, CO ", Latino ,126934,92362,5318,29254
+08031a," Denver, CO ", Non-Hispanic American Indian ,2417,1440,,
+08031a," Denver, CO ", Non-Hispanic Asian ,18843,14069,,4294
+08031a," Denver, CO ", Non-Hispanic black ,43457,29911,2964,10582
+08031a," Denver, CO ", Non-Hispanic white ,271272,223561,8413,39298
+08031a," Denver, CO ", Total ,473882,369180,18020,86682
+08041c," El Paso County, CO ", All other non-Hispanic ,12252,7164,,4745
+08041c," El Paso County, CO ", Latino ,62922,44861,3536,14525
+08041c," El Paso County, CO ", Non-Hispanic American Indian ,1880,1293,,
+08041c," El Paso County, CO ", Non-Hispanic Asian ,13935,9204,,3895
+08041c," El Paso County, CO ", Non-Hispanic black ,24007,16387,1949,5671
+08041c," El Paso County, CO ", Non-Hispanic white ,293498,219978,12647,60873
+08041c," El Paso County, CO ", Total ,408494,298887,19367,90240
+09001c," Fairfield County, CT ", All other non-Hispanic ,12285,8447,,2450
+09001c," Fairfield County, CT ", Latino ,114678,86247,9042,19389
+09001c," Fairfield County, CT ", Non-Hispanic American Indian ,,,,
+09001c," Fairfield County, CT ", Non-Hispanic Asian ,33352,24047,1381,7924
+09001c," Fairfield County, CT ", Non-Hispanic black ,62614,45635,5534,11445
+09001c," Fairfield County, CT ", Non-Hispanic white ,352349,273194,16123,63032
+09001c," Fairfield County, CT ", Total ,575664,437956,33468,104240
+09003c," Hartford County, CT ", All other non-Hispanic ,9226,6011,,2528
+09003c," Hartford County, CT ", Latino ,93475,62155,8596,22724
+09003c," Hartford County, CT ", Non-Hispanic American Indian ,,,,
+09003c," Hartford County, CT ", Non-Hispanic Asian ,28758,22025,,5902
+09003c," Hartford County, CT ", Non-Hispanic black ,70814,51300,7418,12096
+09003c," Hartford County, CT ", Non-Hispanic white ,339088,269976,12345,56767
+09003c," Hartford County, CT ", Total ,542184,412290,29877,100017
+09009c," New Haven County, CT ", All other non-Hispanic ,6729,4354,,1892
+09009c," New Haven County, CT ", Latino ,90233,62092,6643,21498
+09009c," New Haven County, CT ", Non-Hispanic American Indian ,,,,
+09009c," New Haven County, CT ", Non-Hispanic Asian ,24390,18391,,5129
+09009c," New Haven County, CT ", Non-Hispanic black ,67566,44533,5050,17983
+09009c," New Haven County, CT ", Non-Hispanic white ,335263,262451,14758,58054
+09009c," New Haven County, CT ", Total ,524800,392440,27804,104556
+10003c," New Castle County, DE ", All other non-Hispanic ,7027,4317,,2328
+10003c," New Castle County, DE ", Latino ,32187,23870,,7435
+10003c," New Castle County, DE ", Non-Hispanic American Indian ,,,,
+10003c," New Castle County, DE ", Non-Hispanic Asian ,19802,15562,,3535
+10003c," New Castle County, DE ", Non-Hispanic black ,81185,59546,4302,17337
+10003c," New Castle County, DE ", Non-Hispanic white ,200813,156266,8779,35768
+10003c," New Castle County, DE ", Total ,341454,260001,15050,66403
+11001a," Washington, DC ", All other non-Hispanic ,11784,8528,,2848
+11001a," Washington, DC ", Latino ,47667,37966,2081,7620
+11001a," Washington, DC ", Non-Hispanic American Indian ,,,,
+11001a," Washington, DC ", Non-Hispanic Asian ,20203,16596,,3287
+11001a," Washington, DC ", Non-Hispanic black ,186029,119358,18786,47885
+11001a," Washington, DC ", Non-Hispanic white ,174749,154302,3582,16865
+11001a," Washington, DC ", Total ,441487,337425,25557,78505
+12009c," Brevard County, FL ", All other non-Hispanic ,7784,5151,,2047
+12009c," Brevard County, FL ", Latino ,32271,22593,1790,7888
+12009c," Brevard County, FL ", Non-Hispanic American Indian ,1058,,,
+12009c," Brevard County, FL ", Non-Hispanic Asian ,7566,5519,,1903
+12009c," Brevard County, FL ", Non-Hispanic black ,32545,21605,1952,8988
+12009c," Brevard County, FL ", Non-Hispanic white ,246053,166539,9045,70469
+12009c," Brevard County, FL ", Total ,327277,222317,13517,91443
+12011c," Broward County, FL ", All other non-Hispanic ,22548,16536,1858,4154
+12011c," Broward County, FL ", Latino ,350745,272944,14681,63120
+12011c," Broward County, FL ", Non-Hispanic American Indian ,1266,,,649
+12011c," Broward County, FL ", Non-Hispanic Asian ,45213,31313,2927,10973
+12011c," Broward County, FL ", Non-Hispanic black ,326260,232424,33543,60293
+12011c," Broward County, FL ", Non-Hispanic white ,433498,327519,22716,83263
+12011c," Broward County, FL ", Total ,1179530,881353,75725,222452
+12031a," Jacksonville, FL ", All other non-Hispanic ,13296,9559,1355,2382
+12031a," Jacksonville, FL ", Latino ,49005,38254,2309,8442
+12031a," Jacksonville, FL ", Non-Hispanic American Indian ,,,,
+12031a," Jacksonville, FL ", Non-Hispanic Asian ,27684,20877,,5844
+12031a," Jacksonville, FL ", Non-Hispanic black ,160185,108722,12515,38948
+12031a," Jacksonville, FL ", Non-Hispanic white ,310840,228780,13933,68127
+12031a," Jacksonville, FL ", Total ,561704,406504,31075,124125
+12057c," Hillsborough County, FL ", All other non-Hispanic ,20209,14880,,4797
+12057c," Hillsborough County, FL ", Latino ,225630,159133,17203,49294
+12057c," Hillsborough County, FL ", Non-Hispanic American Indian ,794,716,,
+12057c," Hillsborough County, FL ", Non-Hispanic Asian ,33805,22445,1159,10201
+12057c," Hillsborough County, FL ", Non-Hispanic black ,129088,85105,10745,33238
+12057c," Hillsborough County, FL ", Non-Hispanic white ,426116,317696,16353,92067
+12057c," Hillsborough County, FL ", Total ,835642,599975,46029,189638
+12071c," Lee County, FL ", All other non-Hispanic ,6268,3404,,2240
+12071c," Lee County, FL ", Latino ,85699,58981,2419,24299
+12071c," Lee County, FL ", Non-Hispanic American Indian ,,,,
+12071c," Lee County, FL ", Non-Hispanic Asian ,6886,4446,,2060
+12071c," Lee County, FL ", Non-Hispanic black ,30520,20231,2024,8265
+12071c," Lee County, FL ", Non-Hispanic white ,246576,164504,12177,69895
+12071c," Lee County, FL ", Total ,376117,251642,17624,106851
+12086c," Miami-Dade County, FL ", All other non-Hispanic ,9905,6749,,2938
+12086c," Miami-Dade County, FL ", Latino ,1146472,826229,51813,268430
+12086c," Miami-Dade County, FL ", Non-Hispanic American Indian ,,,,
+12086c," Miami-Dade County, FL ", Non-Hispanic Asian ,28688,21168,,6765
+12086c," Miami-Dade County, FL ", Non-Hispanic black ,267482,165939,27544,73999
+12086c," Miami-Dade County, FL ", Non-Hispanic white ,210963,154501,5767,50695
+12086c," Miami-Dade County, FL ", Total ,1663803,1174879,86097,402827
+12095c," Orange County, FL ", All other non-Hispanic ,21932,16351,,4835
+12095c," Orange County, FL ", Latino ,246951,180280,12948,53723
+12095c," Orange County, FL ", Non-Hispanic American Indian ,,,,
+12095c," Orange County, FL ", Non-Hispanic Asian ,46586,35425,,10508
+12095c," Orange County, FL ", Non-Hispanic black ,163301,122737,11138,29426
+12095c," Orange County, FL ", Non-Hispanic white ,350930,271107,12868,66955
+12095c," Orange County, FL ", Total ,830899,626828,38464,165607
+12099c," Palm Beach County, FL ", All other non-Hispanic ,14303,10595,,3088
+12099c," Palm Beach County, FL ", Latino ,188528,136521,10473,41534
+12099c," Palm Beach County, FL ", Non-Hispanic American Indian ,,,,
+12099c," Palm Beach County, FL ", Non-Hispanic Asian ,25105,19301,,5460
+12099c," Palm Beach County, FL ", Non-Hispanic black ,155903,108158,16249,31496
+12099c," Palm Beach County, FL ", Non-Hispanic white ,420047,316483,15667,87897
+12099c," Palm Beach County, FL ", Total ,805002,591818,43435,169749
+12103c," Pinellas County, FL ", All other non-Hispanic ,11155,8052,,2585
+12103c," Pinellas County, FL ", Latino ,53216,40182,2646,10388
+12103c," Pinellas County, FL ", Non-Hispanic American Indian ,1745,1215,,
+12103c," Pinellas County, FL ", Non-Hispanic Asian ,21792,16517,,5044
+12103c," Pinellas County, FL ", Non-Hispanic black ,58339,35556,6104,16679
+12103c," Pinellas County, FL ", Non-Hispanic white ,412151,303221,16751,92179
+12103c," Pinellas County, FL ", Total ,558398,404743,26250,127405
+12105c," Polk County, FL ", All other non-Hispanic ,5491,2693,,2043
+12105c," Polk County, FL ", Latino ,78872,51050,4992,22830
+12105c," Polk County, FL ", Non-Hispanic American Indian ,974,789,,
+12105c," Polk County, FL ", Non-Hispanic Asian ,8222,5887,,2127
+12105c," Polk County, FL ", Non-Hispanic black ,54721,36546,4230,13945
+12105c," Polk County, FL ", Non-Hispanic white ,218187,148725,11008,58454
+12105c," Polk County, FL ", Total ,366467,245690,21193,99584
+13067c," Cobb County, GA ", All other non-Hispanic ,11718,9407,,1968
+13067c," Cobb County, GA ", Latino ,56332,41597,2795,11940
+13067c," Cobb County, GA ", Non-Hispanic American Indian ,,,,
+13067c," Cobb County, GA ", Non-Hispanic Asian ,25927,19266,,6379
+13067c," Cobb County, GA ", Non-Hispanic black ,127666,101260,8442,17964
+13067c," Cobb County, GA ", Non-Hispanic white ,248082,193669,10339,44074
+13067c," Cobb County, GA ", Total ,470173,365543,22252,82378
+13089c," DeKalb County, GA ", All other non-Hispanic ,7959,5871,,1785
+13089c," DeKalb County, GA ", Latino ,36151,27427,1986,6738
+13089c," DeKalb County, GA ", Non-Hispanic American Indian ,,,,
+13089c," DeKalb County, GA ", Non-Hispanic Asian ,29304,20224,,8525
+13089c," DeKalb County, GA ", Non-Hispanic black ,249818,173419,22584,53815
+13089c," DeKalb County, GA ", Non-Hispanic white ,127103,104294,4340,18469
+13089c," DeKalb County, GA ", Total ,451687,332223,29837,89627
+13121c," Fulton County, GA ", All other non-Hispanic ,7935,5429,,1227
+13121c," Fulton County, GA ", Latino ,45267,33500,3855,7912
+13121c," Fulton County, GA ", Non-Hispanic American Indian ,1848,1019,,
+13121c," Fulton County, GA ", Non-Hispanic Asian ,46764,34593,1945,10226
+13121c," Fulton County, GA ", Non-Hispanic black ,277855,193138,20677,64040
+13121c," Fulton County, GA ", Non-Hispanic white ,281306,228180,7305,45821
+13121c," Fulton County, GA ", Total ,660975,495859,35061,130055
+13135c," Gwinnett County, GA ", All other non-Hispanic ,7386,4774,,1795
+13135c," Gwinnett County, GA ", Latino ,111158,81662,3838,25658
+13135c," Gwinnett County, GA ", Non-Hispanic American Indian ,,,,
+13135c," Gwinnett County, GA ", Non-Hispanic Asian ,69581,51625,2198,15758
+13135c," Gwinnett County, GA ", Non-Hispanic black ,151971,111737,10655,29579
+13135c," Gwinnett County, GA ", Non-Hispanic white ,224860,169176,8261,47423
+13135c," Gwinnett County, GA ", Total ,566478,419888,25769,120821
+15003c," Honolulu County, HI ", All other non-Hispanic ,111154,84689,4228,22237
+15003c," Honolulu County, HI ", Latino ,49430,36465,2030,10935
+15003c," Honolulu County, HI ", Non-Hispanic American Indian ,,,,
+15003c," Honolulu County, HI ", Non-Hispanic Asian ,282390,221221,8883,52286
+15003c," Honolulu County, HI ", Non-Hispanic black ,12688,9476,,2265
+15003c," Honolulu County, HI ", Non-Hispanic white ,105049,79032,3254,22763
+15003c," Honolulu County, HI ", Total ,560849,430883,19342,110624
+17031a," Chicago, IL ", All other non-Hispanic ,26459,19951,1400,5108
+17031a," Chicago, IL ", Latino ,486731,335479,31063,120189
+17031a," Chicago, IL ", Non-Hispanic American Indian ,3101,1964,,
+17031a," Chicago, IL ", Non-Hispanic Asian ,119459,84774,7221,27464
+17031a," Chicago, IL ", Non-Hispanic black ,502537,280962,64020,157555
+17031a," Chicago, IL ", Non-Hispanic white ,593894,494987,20502,78405
+17031a," Chicago, IL ", Total ,1732181,1218117,124255,389809
+17031b," Cook County (excluding Chicago), IL ", All other non-Hispanic ,23552,16574,,5435
+17031b," Cook County (excluding Chicago), IL ", Latino ,331388,241077,15425,74886
+17031b," Cook County (excluding Chicago), IL ", Non-Hispanic American Indian ,,,,
+17031b," Cook County (excluding Chicago), IL ", Non-Hispanic Asian ,133186,95538,4587,33061
+17031b," Cook County (excluding Chicago), IL ", Non-Hispanic black ,243206,154424,29095,59687
+17031b," Cook County (excluding Chicago), IL ", Non-Hispanic white ,837945,638891,33194,165860
+17031b," Cook County (excluding Chicago), IL ", Total ,1569994,1147100,83844,339050
+17043c," DuPage County, IL ", All other non-Hispanic ,8928,6957,,1443
+17043c," DuPage County, IL ", Latino ,79382,64768,2663,11951
+17043c," DuPage County, IL ", Non-Hispanic American Indian ,,,,
+17043c," DuPage County, IL ", Non-Hispanic Asian ,68108,49369,3415,15324
+17043c," DuPage County, IL ", Non-Hispanic black ,29425,23311,2477,3637
+17043c," DuPage County, IL ", Non-Hispanic white ,393528,306584,15105,71839
+17043c," DuPage County, IL ", Total ,579731,451349,24188,104194
+17089c," Kane County, IL ", All other non-Hispanic ,3233,2073,,
+17089c," Kane County, IL ", Latino ,98928,74598,5601,18729
+17089c," Kane County, IL ", Non-Hispanic American Indian ,,,,
+17089c," Kane County, IL ", Non-Hispanic Asian ,12439,9689,,2076
+17089c," Kane County, IL ", Non-Hispanic black ,16922,10036,1750,5136
+17089c," Kane County, IL ", Non-Hispanic white ,188449,150973,7327,30149
+17089c," Kane County, IL ", Total ,320003,247401,15651,56951
+17097c," Lake County, IL ", All other non-Hispanic ,5981,4608,,840
+17097c," Lake County, IL ", Latino ,87783,66496,4205,17082
+17097c," Lake County, IL ", Non-Hispanic American Indian ,,,,
+17097c," Lake County, IL ", Non-Hispanic Asian ,31566,24748,1102,5716
+17097c," Lake County, IL ", Non-Hispanic black ,27295,20471,2562,4262
+17097c," Lake County, IL ", Non-Hispanic white ,268598,207731,10354,50513
+17097c," Lake County, IL ", Total ,421425,324256,18756,78413
+17197c," Will County, IL ", All other non-Hispanic ,4436,3613,,
+17197c," Will County, IL ", Latino ,67471,51263,3610,12598
+17197c," Will County, IL ", Non-Hispanic American Indian ,,,,
+17197c," Will County, IL ", Non-Hispanic Asian ,22445,17548,,4615
+17197c," Will County, IL ", Non-Hispanic black ,49049,34874,2745,11430
+17197c," Will County, IL ", Non-Hispanic white ,275940,217042,10596,48302
+17197c," Will County, IL ", Total ,419982,324981,17442,77559
+18097a," Indianapolis, IN ", All other non-Hispanic ,11278,8384,,1821
+18097a," Indianapolis, IN ", Latino ,51914,38712,2466,10736
+18097a," Indianapolis, IN ", Non-Hispanic American Indian ,,,,
+18097a," Indianapolis, IN ", Non-Hispanic Asian ,19226,13193,,5579
+18097a," Indianapolis, IN ", Non-Hispanic black ,155340,102427,19220,33693
+18097a," Indianapolis, IN ", Non-Hispanic white ,346484,261280,15446,69758
+18097a," Indianapolis, IN ", Total ,584974,424535,38659,121780
+20091c," Johnson County, KS ", All other non-Hispanic ,6618,4551,,
+20091c," Johnson County, KS ", Latino ,25301,21111,,3055
+20091c," Johnson County, KS ", Non-Hispanic American Indian ,,,,
+20091c," Johnson County, KS ", Non-Hispanic Asian ,19498,13696,,5328
+20091c," Johnson County, KS ", Non-Hispanic black ,16989,14645,,2071
+20091c," Johnson County, KS ", Non-Hispanic white ,288287,240510,6761,41016
+20091c," Johnson County, KS ", Total ,357204,294977,10102,52125
+21111a," Louisville/Jefferson County, KY ", All other non-Hispanic ,8105,6771,,
+21111a," Louisville/Jefferson County, KY ", Latino ,22395,17921,,4029
+21111a," Louisville/Jefferson County, KY ", Non-Hispanic American Indian ,,,,
+21111a," Louisville/Jefferson County, KY ", Non-Hispanic Asian ,12613,9434,,2703
+21111a," Louisville/Jefferson County, KY ", Non-Hispanic black ,98255,69051,8643,20561
+21111a," Louisville/Jefferson County, KY ", Non-Hispanic white ,325209,246329,11252,67628
+21111a," Louisville/Jefferson County, KY ", Total ,467296,350123,21417,95756
+24003c," Anne Arundel County, MD ", All other non-Hispanic ,6880,5435,,
+24003c," Anne Arundel County, MD ", Latino ,24247,17368,,5952
+24003c," Anne Arundel County, MD ", Non-Hispanic American Indian ,,,,
+24003c," Anne Arundel County, MD ", Non-Hispanic Asian ,15594,13486,,1866
+24003c," Anne Arundel County, MD ", Non-Hispanic black ,53477,41184,2723,9570
+24003c," Anne Arundel County, MD ", Non-Hispanic white ,237203,192819,7759,36625
+24003c," Anne Arundel County, MD ", Total ,338092,270496,12266,55330
+24005c," Baltimore County, MD ", All other non-Hispanic ,9972,7309,,2292
+24005c," Baltimore County, MD ", Latino ,25079,20595,,3764
+24005c," Baltimore County, MD ", Non-Hispanic American Indian ,,,,
+24005c," Baltimore County, MD ", Non-Hispanic Asian ,33049,24142,1181,7726
+24005c," Baltimore County, MD ", Non-Hispanic black ,140472,112549,6421,21502
+24005c," Baltimore County, MD ", Non-Hispanic white ,293403,226103,11779,55521
+24005c," Baltimore County, MD ", Total ,502760,391058,20472,91230
+24031c," Montgomery County, MD ", All other non-Hispanic ,21740,18666,,2438
+24031c," Montgomery County, MD ", Latino ,123792,99189,7327,17276
+24031c," Montgomery County, MD ", Non-Hispanic American Indian ,,,,
+24031c," Montgomery County, MD ", Non-Hispanic Asian ,102251,81639,3167,17445
+24031c," Montgomery County, MD ", Non-Hispanic black ,113416,89777,7230,16409
+24031c," Montgomery County, MD ", Non-Hispanic white ,281599,227625,8737,45237
+24031c," Montgomery County, MD ", Total ,643409,517322,27097,98990
+24033c," Prince George's County, MD ", All other non-Hispanic ,12886,8560,,2868
+24033c," Prince George's County, MD ", Latino ,100224,79698,3597,16929
+24033c," Prince George's County, MD ", Non-Hispanic American Indian ,,,,
+24033c," Prince George's County, MD ", Non-Hispanic Asian ,27201,19990,825,6386
+24033c," Prince George's County, MD ", Non-Hispanic black ,367120,286726,22971,57423
+24033c," Prince George's County, MD ", Non-Hispanic white ,72893,55566,1824,15503
+24033c," Prince George's County, MD ", Total ,581463,451113,30675,99675
+24510a," Baltimore, MD ", All other non-Hispanic ,9421,6372,,2496
+24510a," Baltimore, MD ", Latino ,18491,13914,1156,3421
+24510a," Baltimore, MD ", Non-Hispanic American Indian ,,,,
+24510a," Baltimore, MD ", Non-Hispanic Asian ,12818,8869,,3500
+24510a," Baltimore, MD ", Non-Hispanic black ,233780,135012,22223,76545
+24510a," Baltimore, MD ", Non-Hispanic white ,117454,92153,3167,22134
+24510a," Baltimore, MD ", Total ,392640,256821,27548,108271
+25005c," Bristol County, MA ", All other non-Hispanic ,12888,7501,,4131
+25005c," Bristol County, MA ", Latino ,21891,13621,1709,6561
+25005c," Bristol County, MA ", Non-Hispanic American Indian ,,,,
+25005c," Bristol County, MA ", Non-Hispanic Asian ,8179,5806,,1726
+25005c," Bristol County, MA ", Non-Hispanic black ,12244,10280,,1616
+25005c," Bristol County, MA ", Non-Hispanic white ,298305,225958,15542,56805
+25005c," Bristol County, MA ", Total ,353573,263232,19502,70839
+25009c," Essex County, MA ", All other non-Hispanic ,6852,4543,,1652
+25009c," Essex County, MA ", Latino ,87707,65079,4745,17883
+25009c," Essex County, MA ", Non-Hispanic American Indian ,,,,
+25009c," Essex County, MA ", Non-Hispanic Asian ,16197,11154,,4271
+25009c," Essex County, MA ", Non-Hispanic black ,14450,12513,,1436
+25009c," Essex County, MA ", Non-Hispanic white ,330450,256200,11038,63212
+25009c," Essex County, MA ", Total ,456535,350189,17713,88633
+25025a," Boston, MA ", All other non-Hispanic ,12829,9726,,2501
+25025a," Boston, MA ", Latino ,81773,57562,4093,20118
+25025a," Boston, MA ", Non-Hispanic American Indian ,,,,
+25025a," Boston, MA ", Non-Hispanic Asian ,42248,27851,1403,12994
+25025a," Boston, MA ", Non-Hispanic black ,99355,70863,8465,20027
+25025a," Boston, MA ", Non-Hispanic white ,205922,169544,6660,29718
+25025a," Boston, MA ", Total ,442466,335759,21305,85402
+25027c," Worcester County, MA ", All other non-Hispanic ,9580,6560,1243,1777
+25027c," Worcester County, MA ", Latino ,49501,34985,3807,10709
+25027c," Worcester County, MA ", Non-Hispanic American Indian ,,,,
+25027c," Worcester County, MA ", Non-Hispanic Asian ,25829,17570,1008,7251
+25027c," Worcester County, MA ", Non-Hispanic black ,18977,13727,1388,3862
+25027c," Worcester County, MA ", Non-Hispanic white ,392311,300139,19054,73118
+25027c," Worcester County, MA ", Total ,497087,373410,26561,97116
+26081c," Kent County, MI ", All other non-Hispanic ,6414,5316,,
+26081c," Kent County, MI ", Latino ,35363,26013,2631,6719
+26081c," Kent County, MI ", Non-Hispanic American Indian ,,,,
+26081c," Kent County, MI ", Non-Hispanic Asian ,11623,8159,,2289
+26081c," Kent County, MI ", Non-Hispanic black ,38276,26990,2436,8850
+26081c," Kent County, MI ", Non-Hispanic white ,298869,239042,10365,49462
+26081c," Kent County, MI ", Total ,390966,305650,16735,68581
+26099c," Macomb County, MI ", All other non-Hispanic ,9673,7166,,2507
+26099c," Macomb County, MI ", Latino ,12826,9204,1604,2018
+26099c," Macomb County, MI ", Non-Hispanic American Indian ,1732,,,
+26099c," Macomb County, MI ", Non-Hispanic Asian ,20309,13924,,5636
+26099c," Macomb County, MI ", Non-Hispanic black ,61974,44548,4311,13115
+26099c," Macomb County, MI ", Non-Hispanic white ,428879,314751,19672,94456
+26099c," Macomb County, MI ", Total ,535393,390447,26494,118452
+26125c," Oakland County, MI ", All other non-Hispanic ,9431,6707,,2344
+26125c," Oakland County, MI ", Latino ,28696,21172,,6619
+26125c," Oakland County, MI ", Non-Hispanic American Indian ,1273,873,,
+26125c," Oakland County, MI ", Non-Hispanic Asian ,58243,43477,,13687
+26125c," Oakland County, MI ", Non-Hispanic black ,110382,82417,7927,20038
+26125c," Oakland County, MI ", Non-Hispanic white ,563047,429696,20784,112567
+26125c," Oakland County, MI ", Total ,771072,584342,31075,155655
+26163a," Detroit, MI ", All other non-Hispanic ,7641,3865,,3030
+26163a," Detroit, MI ", Latino ,30268,16065,2622,11581
+26163a," Detroit, MI ", Non-Hispanic American Indian ,,,,
+26163a," Detroit, MI ", Non-Hispanic Asian ,5214,2771,,2265
+26163a," Detroit, MI ", Non-Hispanic black ,310517,155113,45142,110262
+26163a," Detroit, MI ", Non-Hispanic white ,40516,24606,1976,13934
+26163a," Detroit, MI ", Total ,395217,203050,50664,141503
+26163b," Wayne County (excluding Detroit), MI ", All other non-Hispanic ,11877,6537,,4779
+26163b," Wayne County (excluding Detroit), MI ", Latino ,27443,19969,1821,5653
+26163b," Wayne County (excluding Detroit), MI ", Non-Hispanic American Indian ,1213,1180,,
+26163b," Wayne County (excluding Detroit), MI ", Non-Hispanic Asian ,28638,20107,1869,6662
+26163b," Wayne County (excluding Detroit), MI ", Non-Hispanic black ,105224,68239,12087,24898
+26163b," Wayne County (excluding Detroit), MI ", Non-Hispanic white ,503121,356838,20333,125950
+26163b," Wayne County (excluding Detroit), MI ", Total ,677516,472870,36704,167942
+27053c," Hennepin County, MN ", All other non-Hispanic ,19804,14851,,3589
+27053c," Hennepin County, MN ", Latino ,48463,39394,,7806
+27053c," Hennepin County, MN ", Non-Hispanic American Indian ,3997,2601,,
+27053c," Hennepin County, MN ", Non-Hispanic Asian ,61609,48476,,11076
+27053c," Hennepin County, MN ", Non-Hispanic black ,90154,67682,3635,18837
+27053c," Hennepin County, MN ", Non-Hispanic white ,556564,464405,15164,76995
+27053c," Hennepin County, MN ", Total ,780591,637409,23906,119276
+27123c," Ramsey County, MN ", All other non-Hispanic ,7929,5415,,2411
+27123c," Ramsey County, MN ", Latino ,22511,16825,,4963
+27123c," Ramsey County, MN ", Non-Hispanic American Indian ,1454,,,
+27123c," Ramsey County, MN ", Non-Hispanic Asian ,46492,28798,5504,12190
+27123c," Ramsey County, MN ", Non-Hispanic black ,35068,24186,2365,8517
+27123c," Ramsey County, MN ", Non-Hispanic white ,214735,176636,4836,33263
+27123c," Ramsey County, MN ", Total ,328189,253059,13531,61599
+29095c," Jackson County, MO ", All other non-Hispanic ,8838,6787,,1649
+29095c," Jackson County, MO ", Latino ,34594,24905,,8571
+29095c," Jackson County, MO ", Non-Hispanic American Indian ,2258,1661,,
+29095c," Jackson County, MO ", Non-Hispanic Asian ,10051,7027,,2866
+29095c," Jackson County, MO ", Non-Hispanic black ,95565,62201,5298,28066
+29095c," Jackson County, MO ", Non-Hispanic white ,270141,209655,9024,51462
+29095c," Jackson County, MO ", Total ,421447,312236,16078,93133
+29189c," St. Louis County, MO ", All other non-Hispanic ,9019,6266,,2463
+29189c," St. Louis County, MO ", Latino ,15645,11132,,3424
+29189c," St. Louis County, MO ", Non-Hispanic American Indian ,,,,
+29189c," St. Louis County, MO ", Non-Hispanic Asian ,28276,20581,,6558
+29189c," St. Louis County, MO ", Non-Hispanic black ,145661,110126,9626,25909
+29189c," St. Louis County, MO ", Non-Hispanic white ,402748,321316,11730,69702
+29189c," St. Louis County, MO ", Total ,602279,470219,23933,108127
+31055c," Douglas County, NE ", All other non-Hispanic ,3973,3415,,
+31055c," Douglas County, NE ", Latino ,35351,25850,,8063
+31055c," Douglas County, NE ", Non-Hispanic American Indian ,2181,,,
+31055c," Douglas County, NE ", Non-Hispanic Asian ,13439,9012,,3724
+31055c," Douglas County, NE ", Non-Hispanic black ,35312,25147,,8438
+31055c," Douglas County, NE ", Non-Hispanic white ,241621,199126,5206,37289
+31055c," Douglas County, NE ", Total ,331877,264085,9074,58718
+32003a," Las Vegas, NV ", All other non-Hispanic ,12839,7327,1253,4259
+32003a," Las Vegas, NV ", Latino ,131995,93785,7499,30711
+32003a," Las Vegas, NV ", Non-Hispanic American Indian ,1245,936,,
+32003a," Las Vegas, NV ", Non-Hispanic Asian ,34986,24574,1579,8833
+32003a," Las Vegas, NV ", Non-Hispanic black ,46388,28124,3993,14271
+32003a," Las Vegas, NV ", Non-Hispanic white ,192290,137603,12198,42489
+32003a," Las Vegas, NV ", Total ,419743,292349,26522,100872
+32003b," Clark County (excluding Las Vegas), NV ", All other non-Hispanic ,27805,20518,2028,5259
+32003b," Clark County (excluding Las Vegas), NV ", Latino ,262081,187865,20654,53562
+32003b," Clark County (excluding Las Vegas), NV ", Non-Hispanic American Indian ,4979,4039,,
+32003b," Clark County (excluding Las Vegas), NV ", Non-Hispanic Asian ,109900,77412,5247,27241
+32003b," Clark County (excluding Las Vegas), NV ", Non-Hispanic black ,91128,61459,7256,22413
+32003b," Clark County (excluding Las Vegas), NV ", Non-Hispanic white ,386044,276639,22774,86631
+32003b," Clark County (excluding Las Vegas), NV ", Total ,881937,627932,57959,196046
+34003c," Bergen County, NJ ", All other non-Hispanic ,6796,4513,,1860
+34003c," Bergen County, NJ ", Latino ,115925,86128,4157,25640
+34003c," Bergen County, NJ ", Non-Hispanic American Indian ,,,,
+34003c," Bergen County, NJ ", Non-Hispanic Asian ,103787,76763,2860,24164
+34003c," Bergen County, NJ ", Non-Hispanic black ,31444,25388,1232,4824
+34003c," Bergen County, NJ ", Non-Hispanic white ,319805,242996,11090,65719
+34003c," Bergen County, NJ ", Total ,578365,436159,19762,122444
+34007c," Camden County, NJ ", All other non-Hispanic ,4999,3813,,
+34007c," Camden County, NJ ", Latino ,48345,30236,4075,14034
+34007c," Camden County, NJ ", Non-Hispanic American Indian ,,,,
+34007c," Camden County, NJ ", Non-Hispanic Asian ,18857,14446,1221,3190
+34007c," Camden County, NJ ", Non-Hispanic black ,57531,39613,4640,13278
+34007c," Camden County, NJ ", Non-Hispanic white ,182986,142510,8609,31867
+34007c," Camden County, NJ ", Total ,312777,230677,18764,63336
+34013c," Essex County, NJ ", All other non-Hispanic ,11230,7752,,2573
+34013c," Essex County, NJ ", Latino ,111364,79988,7594,23782
+34013c," Essex County, NJ ", Non-Hispanic American Indian ,,,,
+34013c," Essex County, NJ ", Non-Hispanic Asian ,26569,20118,2062,4389
+34013c," Essex County, NJ ", Non-Hispanic black ,190461,124482,24206,41773
+34013c," Essex County, NJ ", Non-Hispanic white ,148844,112479,5579,30786
+34013c," Essex County, NJ ", Total ,488845,345196,40346,103303
+34017c," Hudson County, NJ ", All other non-Hispanic ,8916,6712,,1924
+34017c," Hudson County, NJ ", Latino ,190133,139225,13380,37528
+34017c," Hudson County, NJ ", Non-Hispanic American Indian ,,,,
+34017c," Hudson County, NJ ", Non-Hispanic Asian ,76324,55282,3044,17998
+34017c," Hudson County, NJ ", Non-Hispanic black ,47767,34671,3336,9760
+34017c," Hudson County, NJ ", Non-Hispanic white ,136354,106799,5488,24067
+34017c," Hudson County, NJ ", Total ,459995,342772,25528,91695
+34023c," Middlesex County, NJ ", All other non-Hispanic ,8487,6632,,1230
+34023c," Middlesex County, NJ ", Latino ,106896,79775,2856,24265
+34023c," Middlesex County, NJ ", Non-Hispanic American Indian ,,,,
+34023c," Middlesex County, NJ ", Non-Hispanic Asian ,126997,89304,3581,34112
+34023c," Middlesex County, NJ ", Non-Hispanic black ,47275,34859,4763,7653
+34023c," Middlesex County, NJ ", Non-Hispanic white ,224736,167743,10022,46971
+34023c," Middlesex County, NJ ", Total ,515010,378932,21847,114231
+34025c," Monmouth County, NJ ", All other non-Hispanic ,7264,5140,,2023
+34025c," Monmouth County, NJ ", Latino ,39795,30734,1868,7193
+34025c," Monmouth County, NJ ", Non-Hispanic American Indian ,,,,
+34025c," Monmouth County, NJ ", Non-Hispanic Asian ,21182,15201,,5027
+34025c," Monmouth County, NJ ", Non-Hispanic black ,26391,18275,2235,5881
+34025c," Monmouth County, NJ ", Non-Hispanic white ,290925,218938,11663,60324
+34025c," Monmouth County, NJ ", Total ,385721,288452,16821,80448
+34029c," Ocean County, NJ ", All other non-Hispanic ,4108,3808,,
+34029c," Ocean County, NJ ", Latino ,30900,25156,1246,4498
+34029c," Ocean County, NJ ", Non-Hispanic Asian ,8668,8067,,
+34029c," Ocean County, NJ ", Non-Hispanic black ,9140,6627,,
+34029c," Ocean County, NJ ", Non-Hispanic white ,264675,193435,11417,59823
+34029c," Ocean County, NJ ", Total ,317491,237093,13792,66606
+34031c," Passaic County, NJ ", All other non-Hispanic ,3106,2236,,
+34031c," Passaic County, NJ ", Latino ,126657,85527,3023,38107
+34031c," Passaic County, NJ ", Non-Hispanic American Indian ,,,,
+34031c," Passaic County, NJ ", Non-Hispanic Asian ,18312,13112,,4666
+34031c," Passaic County, NJ ", Non-Hispanic black ,33920,20040,2330,11550
+34031c," Passaic County, NJ ", Non-Hispanic white ,129182,97711,3439,28032
+34031c," Passaic County, NJ ", Total ,311340,218735,9485,83120
+34039c," Union County, NJ ", All other non-Hispanic ,7405,5522,,1656
+34039c," Union County, NJ ", Latino ,109470,83574,6820,19076
+34039c," Union County, NJ ", Non-Hispanic American Indian ,,,,
+34039c," Union County, NJ ", Non-Hispanic Asian ,17228,13299,,3488
+34039c," Union County, NJ ", Non-Hispanic black ,74318,55719,6575,12024
+34039c," Union County, NJ ", Non-Hispanic white ,137468,101594,6756,29118
+34039c," Union County, NJ ", Total ,345950,259769,20819,65362
+35001a," Albuquerque, NM ", All other non-Hispanic ,7975,5152,,2170
+35001a," Albuquerque, NM ", Latino ,198153,135114,12081,50958
+35001a," Albuquerque, NM ", Non-Hispanic American Indian ,15916,9559,,4680
+35001a," Albuquerque, NM ", Non-Hispanic Asian ,11041,7798,,2906
+35001a," Albuquerque, NM ", Non-Hispanic black ,9794,6500,,2915
+35001a," Albuquerque, NM ", Non-Hispanic white ,154986,112746,5926,36314
+35001a," Albuquerque, NM ", Total ,397865,276869,21053,99943
+36005a," The Bronx, New York City ", All other non-Hispanic ,15030,8289,1903,4838
+36005a," The Bronx, New York City ", Latino ,500653,315377,33754,151522
+36005a," The Bronx, New York City ", Non-Hispanic American Indian ,,,,
+36005a," The Bronx, New York City ", Non-Hispanic Asian ,37108,23467,1562,12079
+36005a," The Bronx, New York City ", Non-Hispanic black ,262321,170022,22680,69619
+36005a," The Bronx, New York City ", Non-Hispanic white ,75987,53380,4032,18575
+36005a," The Bronx, New York City ", Total ,893865,571328,64563,257974
+36029c," Erie County, NY ", All other non-Hispanic ,6171,3437,,2152
+36029c," Erie County, NY ", Latino ,25584,16548,1166,7870
+36029c," Erie County, NY ", Non-Hispanic American Indian ,3067,1417,,1501
+36029c," Erie County, NY ", Non-Hispanic Asian ,20105,10593,,8636
+36029c," Erie County, NY ", Non-Hispanic black ,71947,44265,5318,22364
+36029c," Erie County, NY ", Non-Hispanic white ,430268,340714,13467,76087
+36029c," Erie County, NY ", Total ,557142,416974,21558,118610
+36047a," Brooklyn and Staten Island, New York City ", All other non-Hispanic ,32808,25737,2555,4516
+36047a," Brooklyn and Staten Island, New York City ", Latino ,321538,210808,20471,90259
+36047a," Brooklyn and Staten Island, New York City ", Non-Hispanic American Indian ,3100,,,1786
+36047a," Brooklyn and Staten Island, New York City ", Non-Hispanic Asian ,217907,148745,13061,56101
+36047a," Brooklyn and Staten Island, New York City ", Non-Hispanic black ,505798,343423,35225,127150
+36047a," Brooklyn and Staten Island, New York City ", Non-Hispanic white ,591330,442493,25861,122976
+36047a," Brooklyn and Staten Island, New York City ", Total ,1672481,1172407,97286,402788
+36055c," Monroe County, NY ", All other non-Hispanic ,5170,3447,,
+36055c," Monroe County, NY ", Latino ,35401,22260,3113,10028
+36055c," Monroe County, NY ", Non-Hispanic American Indian ,1362,,,
+36055c," Monroe County, NY ", Non-Hispanic Asian ,18514,12282,,5671
+36055c," Monroe County, NY ", Non-Hispanic black ,64729,38699,8859,17171
+36055c," Monroe County, NY ", Non-Hispanic white ,325490,259415,8744,57331
+36055c," Monroe County, NY ", Total ,450666,336778,22240,91648
+36059c," Nassau County, NY ", All other non-Hispanic ,14462,11304,,2634
+36059c," Nassau County, NY ", Latino ,141646,106409,7256,27981
+36059c," Nassau County, NY ", Non-Hispanic American Indian ,,,,
+36059c," Nassau County, NY ", Non-Hispanic Asian ,78966,58443,2644,17879
+36059c," Nassau County, NY ", Non-Hispanic black ,96025,69767,6486,19772
+36059c," Nassau County, NY ", Non-Hispanic white ,492318,374444,17470,100404
+36059c," Nassau County, NY ", Total ,824374,620861,34380,169133
+36061a," Manhattan, New York City ", All other non-Hispanic ,27229,21970,,4037
+36061a," Manhattan, New York City ", Latino ,274202,186695,20399,67108
+36061a," Manhattan, New York City ", Non-Hispanic American Indian ,,,,
+36061a," Manhattan, New York City ", Non-Hispanic Asian ,150172,108320,5880,35972
+36061a," Manhattan, New York City ", Non-Hispanic black ,126735,79003,11917,35815
+36061a," Manhattan, New York City ", Non-Hispanic white ,533940,455659,14062,64219
+36061a," Manhattan, New York City ", Total ,1113440,852471,53480,207489
+36081a," Queens, New York City ", All other non-Hispanic ,63028,43819,4083,15126
+36081a," Queens, New York City ", Latino ,481545,346199,23115,112231
+36081a," Queens, New York City ", Non-Hispanic American Indian ,3424,2573,,
+36081a," Queens, New York City ", Non-Hispanic Asian ,436051,296542,19098,120411
+36081a," Queens, New York City ", Non-Hispanic black ,284313,199565,22755,61993
+36081a," Queens, New York City ", Non-Hispanic white ,547224,400381,23457,123386
+36081a," Queens, New York City ", Total ,1815585,1289079,92739,433767
+36103c," Suffolk County, NY ", All other non-Hispanic ,10113,7685,,1906
+36103c," Suffolk County, NY ", Latino ,172737,127290,6624,38823
+36103c," Suffolk County, NY ", Non-Hispanic American Indian ,1415,,,
+36103c," Suffolk County, NY ", Non-Hispanic Asian ,38926,27715,,10323
+36103c," Suffolk County, NY ", Non-Hispanic black ,64116,47035,4017,13064
+36103c," Suffolk County, NY ", Non-Hispanic white ,630417,483700,23171,123546
+36103c," Suffolk County, NY ", Total ,917724,694398,35222,188104
+36119c," Westchester County, NY ", All other non-Hispanic ,11964,8230,,2467
+36119c," Westchester County, NY ", Latino ,147633,111088,7546,28999
+36119c," Westchester County, NY ", Non-Hispanic American Indian ,1398,,,
+36119c," Westchester County, NY ", Non-Hispanic Asian ,38216,27385,1821,9010
+36119c," Westchester County, NY ", Non-Hispanic black ,78806,57666,5681,15459
+36119c," Westchester County, NY ", Non-Hispanic white ,303031,229124,10943,62964
+36119c," Westchester County, NY ", Total ,581048,434501,27258,119289
+37119c," Mecklenburg County, NC ", All other non-Hispanic ,14053,11144,,1847
+37119c," Mecklenburg County, NC ", Latino ,80550,57852,5374,17324
+37119c," Mecklenburg County, NC ", Non-Hispanic American Indian ,1324,,,
+37119c," Mecklenburg County, NC ", Non-Hispanic Asian ,40332,28917,2561,8854
+37119c," Mecklenburg County, NC ", Non-Hispanic black ,203625,148312,15856,39457
+37119c," Mecklenburg County, NC ", Non-Hispanic white ,324915,260097,11640,53178
+37119c," Mecklenburg County, NC ", Total ,664799,507190,36493,121116
+37183c," Wake County, NC ", All other non-Hispanic ,10995,8864,,1623
+37183c," Wake County, NC ", Latino ,60252,44666,2637,12949
+37183c," Wake County, NC ", Non-Hispanic American Indian ,1390,,,
+37183c," Wake County, NC ", Non-Hispanic Asian ,44519,32633,,11324
+37183c," Wake County, NC ", Non-Hispanic black ,131833,96974,10704,24155
+37183c," Wake County, NC ", Non-Hispanic white ,396209,317215,10736,68258
+37183c," Wake County, NC ", Total ,645198,501499,25147,118552
+39035c," Cuyahoga County, OH ", All other non-Hispanic ,14234,8917,,3846
+39035c," Cuyahoga County, OH ", Latino ,42107,26407,4135,11565
+39035c," Cuyahoga County, OH ", Non-Hispanic American Indian ,814,,,
+39035c," Cuyahoga County, OH ", Non-Hispanic Asian ,25121,18368,,5730
+39035c," Cuyahoga County, OH ", Non-Hispanic black ,218509,137173,27860,53476
+39035c," Cuyahoga County, OH ", Non-Hispanic white ,458225,348010,19005,91210
+39035c," Cuyahoga County, OH ", Total ,759010,539432,53644,165934
+39049c," Franklin County, OH ", All other non-Hispanic ,23785,17154,1380,5251
+39049c," Franklin County, OH ", Latino ,36107,27329,2219,6559
+39049c," Franklin County, OH ", Non-Hispanic American Indian ,,,,
+39049c," Franklin County, OH ", Non-Hispanic Asian ,39241,26589,,11931
+39049c," Franklin County, OH ", Non-Hispanic black ,165479,116170,11903,37406
+39049c," Franklin County, OH ", Non-Hispanic white ,528987,423858,19341,85788
+39049c," Franklin County, OH ", Total ,794656,611782,35564,147310
+39061c," Hamilton County, OH ", All other non-Hispanic ,9147,6423,1254,1470
+39061c," Hamilton County, OH ", Latino ,12431,9422,,2429
+39061c," Hamilton County, OH ", Non-Hispanic American Indian ,,,,
+39061c," Hamilton County, OH ", Non-Hispanic Asian ,13256,9285,,3474
+39061c," Hamilton County, OH ", Non-Hispanic black ,124292,84532,10941,28819
+39061c," Hamilton County, OH ", Non-Hispanic white ,331973,256911,9859,65203
+39061c," Hamilton County, OH ", Total ,491613,367050,23131,101432
+39113c," Montgomery County, OH ", All other non-Hispanic ,7276,5029,,1609
+39113c," Montgomery County, OH ", Latino ,7314,5103,,1552
+39113c," Montgomery County, OH ", Non-Hispanic American Indian ,,,,
+39113c," Montgomery County, OH ", Non-Hispanic Asian ,7142,4775,,1659
+39113c," Montgomery County, OH ", Non-Hispanic black ,62791,39296,5753,17742
+39113c," Montgomery County, OH ", Non-Hispanic white ,221453,160148,10230,51075
+39113c," Montgomery County, OH ", Total ,306462,214628,17988,73846
+39153c," Summit County, OH ", All other non-Hispanic ,7197,4798,,2399
+39153c," Summit County, OH ", Latino ,5686,3798,,
+39153c," Summit County, OH ", Non-Hispanic American Indian ,,,,
+39153c," Summit County, OH ", Non-Hispanic Asian ,9749,7028,,2294
+39153c," Summit County, OH ", Non-Hispanic black ,46302,27118,5073,14111
+39153c," Summit County, OH ", Non-Hispanic white ,260378,200716,9059,50603
+39153c," Summit County, OH ", Total ,329552,243698,15055,70799
+40109c," Oklahoma County, OK ", All other non-Hispanic ,22294,15622,,5394
+40109c," Oklahoma County, OK ", Latino ,71684,52495,2459,16730
+40109c," Oklahoma County, OK ", Non-Hispanic American Indian ,11358,7188,,2765
+40109c," Oklahoma County, OK ", Non-Hispanic Asian ,19436,14973,,3847
+40109c," Oklahoma County, OK ", Non-Hispanic black ,68291,46131,4000,18160
+40109c," Oklahoma County, OK ", Non-Hispanic white ,271830,199859,8384,63587
+40109c," Oklahoma County, OK ", Total ,464893,336268,18142,110483
+41051a," Portland, OR ", All other non-Hispanic ,18860,13024,1996,3840
+41051a," Portland, OR ", Latino ,35834,29251,2363,4220
+41051a," Portland, OR ", Non-Hispanic American Indian ,2107,,,
+41051a," Portland, OR ", Non-Hispanic Asian ,34592,25431,1326,7835
+41051a," Portland, OR ", Non-Hispanic black ,20191,12856,2442,4893
+41051a," Portland, OR ", Non-Hispanic white ,312059,245970,13660,52429
+41051a," Portland, OR ", Total ,423643,327865,22070,73708
+41067c," Washington County, OR ", All other non-Hispanic ,11896,7896,,2869
+41067c," Washington County, OR ", Latino ,55542,43374,2346,9822
+41067c," Washington County, OR ", Non-Hispanic American Indian ,,,,
+41067c," Washington County, OR ", Non-Hispanic Asian ,40670,29840,2079,8751
+41067c," Washington County, OR ", Non-Hispanic black ,6829,4862,,
+41067c," Washington County, OR ", Non-Hispanic white ,244581,186496,10704,47381
+41067c," Washington County, OR ", Total ,360502,273000,17510,69992
+42003c," Allegheny County, PA ", All other non-Hispanic ,13629,9397,,3622
+42003c," Allegheny County, PA ", Latino ,15056,9895,,4748
+42003c," Allegheny County, PA ", Non-Hispanic American Indian ,904,,,
+42003c," Allegheny County, PA ", Non-Hispanic Asian ,29955,19160,,10233
+42003c," Allegheny County, PA ", Non-Hispanic black ,93066,59561,8684,24821
+42003c," Allegheny County, PA ", Non-Hispanic white ,602708,471693,22371,108644
+42003c," Allegheny County, PA ", Total ,755318,570075,32806,152437
+42017c," Bucks County, PA ", All other non-Hispanic ,3503,2368,,
+42017c," Bucks County, PA ", Latino ,18118,12775,,4563
+42017c," Bucks County, PA ", Non-Hispanic American Indian ,,,,
+42017c," Bucks County, PA ", Non-Hispanic Asian ,19416,14601,,4038
+42017c," Bucks County, PA ", Non-Hispanic black ,14275,10876,,2211
+42017c," Bucks County, PA ", Non-Hispanic white ,324040,252558,14893,56589
+42017c," Bucks County, PA ", Total ,379806,293382,17751,68673
+42045c," Delaware County, PA ", All other non-Hispanic ,7614,5521,,1005
+42045c," Delaware County, PA ", Latino ,12067,9048,,2616
+42045c," Delaware County, PA ", Non-Hispanic American Indian ,,,,
+42045c," Delaware County, PA ", Non-Hispanic Asian ,19250,14833,,3477
+42045c," Delaware County, PA ", Non-Hispanic black ,68496,48460,4571,15465
+42045c," Delaware County, PA ", Non-Hispanic white ,226957,175804,8944,42209
+42045c," Delaware County, PA ", Total ,334673,253802,16099,64772
+42071c," Lancaster County, PA ", All other non-Hispanic ,3478,2568,,
+42071c," Lancaster County, PA ", Latino ,31348,20898,2861,7589
+42071c," Lancaster County, PA ", Non-Hispanic Asian ,7791,5688,,
+42071c," Lancaster County, PA ", Non-Hispanic black ,9718,6106,,3191
+42071c," Lancaster County, PA ", Non-Hispanic white ,257856,199417,8275,50164
+42071c," Lancaster County, PA ", Total ,310191,234677,12096,63418
+42091c," Montgomery County, PA ", All other non-Hispanic ,7579,5307,,1469
+42091c," Montgomery County, PA ", Latino ,23234,18573,,2838
+42091c," Montgomery County, PA ", Non-Hispanic American Indian ,,,,
+42091c," Montgomery County, PA ", Non-Hispanic Asian ,40077,28466,2479,9132
+42091c," Montgomery County, PA ", Non-Hispanic black ,41920,33505,1884,6531
+42091c," Montgomery County, PA ", Non-Hispanic white ,374916,294943,15319,64654
+42091c," Montgomery County, PA ", Total ,488385,381277,22397,84711
+42101a," Philadelphia, PA ", All other non-Hispanic ,23597,16038,1931,5628
+42101a," Philadelphia, PA ", Latino ,128924,74313,10204,44407
+42101a," Philadelphia, PA ", Non-Hispanic American Indian ,,,,
+42101a," Philadelphia, PA ", Non-Hispanic Asian ,77188,50589,4544,22055
+42101a," Philadelphia, PA ", Non-Hispanic black ,392261,225001,39444,127816
+42101a," Philadelphia, PA ", Non-Hispanic white ,359474,264250,14638,80586
+42101a," Philadelphia, PA ", Total ,982761,630771,70761,281229
+44007c," Providence County, RI ", All other non-Hispanic ,14912,10252,1183,3477
+44007c," Providence County, RI ", Latino ,81848,52922,5445,23481
+44007c," Providence County, RI ", Non-Hispanic American Indian ,1254,,,
+44007c," Providence County, RI ", Non-Hispanic Asian ,17582,9962,,6915
+44007c," Providence County, RI ", Non-Hispanic black ,29824,22824,3089,3911
+44007c," Providence County, RI ", Non-Hispanic white ,243909,185550,7464,50895
+44007c," Providence County, RI ", Total ,389329,282313,17970,89046
+47037a," Nashville-Davidson metropolitan government, TN ", All other non-Hispanic ,9215,7484,,1418
+47037a," Nashville-Davidson metropolitan government, TN ", Latino ,40348,33219,937,6192
+47037a," Nashville-Davidson metropolitan government, TN ", Non-Hispanic American Indian ,2359,,,
+47037a," Nashville-Davidson metropolitan government, TN ", Non-Hispanic Asian ,14844,10656,,3553
+47037a," Nashville-Davidson metropolitan government, TN ", Non-Hispanic black ,117655,84930,7704,25021
+47037a," Nashville-Davidson metropolitan government, TN ", Non-Hispanic white ,256074,209603,4933,41538
+47037a," Nashville-Davidson metropolitan government, TN ", Total ,440495,347166,14522,78807
+47157c," Shelby County, TN ", All other non-Hispanic ,9731,6798,,2643
+47157c," Shelby County, TN ", Latino ,31754,21850,2010,7894
+47157c," Shelby County, TN ", Non-Hispanic American Indian ,,,,
+47157c," Shelby County, TN ", Non-Hispanic Asian ,16071,12024,,3817
+47157c," Shelby County, TN ", Non-Hispanic black ,303695,204066,27033,72596
+47157c," Shelby County, TN ", Non-Hispanic white ,210850,158660,7006,45184
+47157c," Shelby County, TN ", Total ,572558,403574,36569,132415
+48029c," Bexar County, TX ", All other non-Hispanic ,16980,12929,,3381
+48029c," Bexar County, TX ", Latino ,680882,471946,29434,179502
+48029c," Bexar County, TX ", Non-Hispanic American Indian ,1320,,,
+48029c," Bexar County, TX ", Non-Hispanic Asian ,36604,26173,,9604
+48029c," Bexar County, TX ", Non-Hispanic black ,85193,58372,4779,22042
+48029c," Bexar County, TX ", Non-Hispanic white ,330355,242362,11490,76503
+48029c," Bexar County, TX ", Total ,1151334,812691,47366,291277
+48085c," Collin County, TX ", All other non-Hispanic ,8054,5781,,1896
+48085c," Collin County, TX ", Latino ,83476,63724,2150,17602
+48085c," Collin County, TX ", Non-Hispanic American Indian ,2018,1230,,
+48085c," Collin County, TX ", Non-Hispanic Asian ,82873,61186,1905,19782
+48085c," Collin County, TX ", Non-Hispanic black ,55710,44583,2306,8821
+48085c," Collin County, TX ", Non-Hispanic white ,341048,268902,10395,61751
+48085c," Collin County, TX ", Total ,573179,445406,17133,110640
+48113c," Dallas County, TX ", All other non-Hispanic ,26056,19859,943,5254
+48113c," Dallas County, TX ", Latino ,604680,447192,21831,135657
+48113c," Dallas County, TX ", Non-Hispanic American Indian ,2219,1556,,
+48113c," Dallas County, TX ", Non-Hispanic Asian ,104913,75099,5019,24795
+48113c," Dallas County, TX ", Non-Hispanic black ,357243,251030,22007,84206
+48113c," Dallas County, TX ", Non-Hispanic white ,500145,392652,13763,93730
+48113c," Dallas County, TX ", Total ,1595256,1187388,63595,344273
+48121c," Denton County, TX ", All other non-Hispanic ,8894,7268,,1018
+48121c," Denton County, TX ", Latino ,89483,67507,3728,18248
+48121c," Denton County, TX ", Non-Hispanic American Indian ,1190,834,,
+48121c," Denton County, TX ", Non-Hispanic Asian ,41745,30837,955,9953
+48121c," Denton County, TX ", Non-Hispanic black ,50346,41108,2334,6904
+48121c," Denton County, TX ", Non-Hispanic white ,307511,247298,11150,49063
+48121c," Denton County, TX ", Total ,499169,394852,18798,85519
+48141a," El Paso, TX ", All other non-Hispanic ,2746,1606,,
+48141a," El Paso, TX ", Latino ,316950,217705,13568,85677
+48141a," El Paso, TX ", Non-Hispanic American Indian ,673,324,,
+48141a," El Paso, TX ", Non-Hispanic Asian ,6403,4407,,1776
+48141a," El Paso, TX ", Non-Hispanic black ,13792,10258,,2867
+48141a," El Paso, TX ", Non-Hispanic white ,51635,34884,3076,13675
+48141a," El Paso, TX ", Total ,392199,269184,17722,105293
+48157c," Fort Bend County, TX ", All other non-Hispanic ,4953,3604,,1210
+48157c," Fort Bend County, TX ", Latino ,103843,78220,3378,22245
+48157c," Fort Bend County, TX ", Non-Hispanic Asian ,88277,62516,2072,23689
+48157c," Fort Bend County, TX ", Non-Hispanic black ,91530,69096,5256,17178
+48157c," Fort Bend County, TX ", Non-Hispanic white ,151892,114837,3557,33498
+48157c," Fort Bend County, TX ", Total ,440495,328273,14402,97820
+48201c," Harris County, TX ", All other non-Hispanic ,37565,26802,2578,8185
+48201c," Harris County, TX ", Latino ,1164880,860052,43694,261134
+48201c," Harris County, TX ", Non-Hispanic American Indian ,4479,3405,,
+48201c," Harris County, TX ", Non-Hispanic Asian ,213473,148786,7952,56735
+48201c," Harris County, TX ", Non-Hispanic black ,532850,380082,37572,115196
+48201c," Harris County, TX ", Non-Hispanic white ,898577,673353,34451,190773
+48201c," Harris County, TX ", Total ,2851824,2092480,126247,633097
+48215c," Hidalgo County, TX ", All other non-Hispanic ,,,,
+48215c," Hidalgo County, TX ", Latino ,428927,265086,26262,137579
+48215c," Hidalgo County, TX ", Non-Hispanic American Indian ,,,,
+48215c," Hidalgo County, TX ", Non-Hispanic Asian ,5761,4280,,1481
+48215c," Hidalgo County, TX ", Non-Hispanic black ,,,,
+48215c," Hidalgo County, TX ", Non-Hispanic white ,24033,16328,2339,5366
+48215c," Hidalgo County, TX ", Total ,462191,287803,28686,145702
+48439c," Tarrant County, TX ", All other non-Hispanic ,20694,15714,,4358
+48439c," Tarrant County, TX ", Latino ,329279,244314,10756,74209
+48439c," Tarrant County, TX ", Non-Hispanic American Indian ,4628,3126,,1362
+48439c," Tarrant County, TX ", Non-Hispanic Asian ,72225,53362,2542,16321
+48439c," Tarrant County, TX ", Non-Hispanic black ,193665,144263,9522,39880
+48439c," Tarrant County, TX ", Non-Hispanic white ,604448,462373,20897,121178
+48439c," Tarrant County, TX ", Total ,1224939,923152,44479,257308
+48453c," Travis County, TX ", All other non-Hispanic ,14394,10259,,3194
+48453c," Travis County, TX ", Latino ,251870,192754,9507,49609
+48453c," Travis County, TX ", Non-Hispanic American Indian ,848,,,
+48453c," Travis County, TX ", Non-Hispanic Asian ,54153,40421,,12949
+48453c," Travis County, TX ", Non-Hispanic black ,61633,45148,2563,13922
+48453c," Travis County, TX ", Non-Hispanic white ,402250,323164,11862,67224
+48453c," Travis County, TX ", Total ,785148,612243,25768,147137
+49035c," Salt Lake County, UT ", All other non-Hispanic ,11704,8333,,2586
+49035c," Salt Lake County, UT ", Latino ,114639,92826,2537,19276
+49035c," Salt Lake County, UT ", Non-Hispanic American Indian ,5661,3561,,
+49035c," Salt Lake County, UT ", Non-Hispanic Asian ,36477,27189,,8619
+49035c," Salt Lake County, UT ", Non-Hispanic black ,12578,9988,,1635
+49035c," Salt Lake County, UT ", Non-Hispanic white ,495819,384097,16074,95648
+49035c," Salt Lake County, UT ", Total ,676878,525994,21923,128961
+49049c," Utah County, UT ", All other non-Hispanic ,6581,4278,,1480
+49049c," Utah County, UT ", Latino ,35898,28080,1193,6625
+49049c," Utah County, UT ", Non-Hispanic American Indian ,1991,,,
+49049c," Utah County, UT ", Non-Hispanic Asian ,9154,6824,,1840
+49049c," Utah County, UT ", Non-Hispanic black ,,,,
+49049c," Utah County, UT ", Non-Hispanic white ,264382,197101,6151,61130
+49049c," Utah County, UT ", Total ,319372,238430,8657,72285
+51059c," Fairfax County, VA ", All other non-Hispanic ,24022,17925,,5126
+51059c," Fairfax County, VA ", Latino ,122228,102117,6041,14070
+51059c," Fairfax County, VA ", Non-Hispanic American Indian ,,,,
+51059c," Fairfax County, VA ", Non-Hispanic Asian ,149125,113880,5000,30245
+51059c," Fairfax County, VA ", Non-Hispanic black ,67691,54789,3662,9240
+51059c," Fairfax County, VA ", Non-Hispanic white ,376775,299286,12127,65362
+51059c," Fairfax County, VA ", Total ,740508,588584,27881,124043
+53033a," Seattle, WA ", All other non-Hispanic ,21574,16313,,4445
+53033a," Seattle, WA ", Latino ,29595,23166,,5601
+53033a," Seattle, WA ", Non-Hispanic American Indian ,2265,,,
+53033a," Seattle, WA ", Non-Hispanic Asian ,73512,52640,2724,18148
+53033a," Seattle, WA ", Non-Hispanic black ,31763,21036,3712,7015
+53033a," Seattle, WA ", Non-Hispanic white ,329204,280594,9010,39600
+53033a," Seattle, WA ", Total ,487913,395212,17174,75527
+53033b," King County (excluding Seattle), WA ", All other non-Hispanic ,28968,20510,1753,6705
+53033b," King County (excluding Seattle), WA ", Latino ,92774,71908,3601,17265
+53033b," King County (excluding Seattle), WA ", Non-Hispanic American Indian ,4889,3355,,1009
+53033b," King County (excluding Seattle), WA ", Non-Hispanic Asian ,180887,132258,6071,42558
+53033b," King County (excluding Seattle), WA ", Non-Hispanic black ,50289,37129,2851,10309
+53033b," King County (excluding Seattle), WA ", Non-Hispanic white ,541094,423287,18246,99561
+53033b," King County (excluding Seattle), WA ", Total ,898901,688447,33047,177407
+53053c," Pierce County, WA ", All other non-Hispanic ,23068,16482,,5541
+53053c," Pierce County, WA ", Latino ,46105,29151,3031,13923
+53053c," Pierce County, WA ", Non-Hispanic American Indian ,5367,2491,,2085
+53053c," Pierce County, WA ", Non-Hispanic Asian ,43004,28587,1688,12729
+53053c," Pierce County, WA ", Non-Hispanic black ,38117,28468,2868,6781
+53053c," Pierce County, WA ", Non-Hispanic white ,353778,246590,17132,90056
+53053c," Pierce County, WA ", Total ,509439,351769,26555,131115
+53061c," Snohomish County, WA ", All other non-Hispanic ,21644,16920,,3702
+53061c," Snohomish County, WA ", Latino ,42890,34955,,6533
+53061c," Snohomish County, WA ", Non-Hispanic American Indian ,3190,1583,,1607
+53061c," Snohomish County, WA ", Non-Hispanic Asian ,53101,38008,2244,12849
+53061c," Snohomish County, WA ", Non-Hispanic black ,13312,11135,,1664
+53061c," Snohomish County, WA ", Non-Hispanic white ,353719,268454,13856,71409
+53061c," Snohomish County, WA ", Total ,487856,371055,19037,97764
+55079a," Milwaukee, WI ", All other non-Hispanic ,6192,4794,,
+55079a," Milwaukee, WI ", Latino ,60573,41737,3040,15796
+55079a," Milwaukee, WI ", Non-Hispanic American Indian ,,,,
+55079a," Milwaukee, WI ", Non-Hispanic Asian ,11174,7929,,3076
+55079a," Milwaukee, WI ", Non-Hispanic black ,135976,82343,14683,38950
+55079a," Milwaukee, WI ", Non-Hispanic white ,115857,89338,4208,22311
+55079a," Milwaukee, WI ", Total ,330637,226463,22559,81615

@@ -147,7 +147,7 @@ format.fn0 = function(fmt){
 var fp = dir.local().url("/data/emp_status.json");
 
 function main(){
-	var geos = [{"fips":"6001c","name":"Alameda County (part)"},{"fips":"35001a","name":"Albuquerque city, New Mexico"},{"fips":"42003c","name":"Allegheny County (part)"},{"fips":"24003c","name":"Anne Arundel County (part)"},{"fips":"24510a","name":"Baltimore city, Maryland"},{"fips":"24005c","name":"Baltimore County (part)"},{"fips":"34003c","name":"Bergen County (part)"},{"fips":"48029c","name":"Bexar County (part)"},{"fips":"25025a","name":"Boston city, Massachusetts"},{"fips":"12009c","name":"Brevard County (part)"},{"fips":"25005c","name":"Bristol County (part)"},{"fips":"12011c","name":"Broward County (part)"},{"fips":"42017c","name":"Bucks County (part)"},{"fips":"34007c","name":"Camden County (part)"},{"fips":"17031a","name":"Chicago city, Illinois"},{"fips":"13067c","name":"Cobb County (part)"},{"fips":"48085c","name":"Collin County (part)"},{"fips":"6013c","name":"Contra Costa County (part)"},{"fips":"39035c","name":"Cuyahoga County (part)"},{"fips":"48113c","name":"Dallas County (part)"},{"fips":"13089c","name":"DeKalb County (part)"},{"fips":"42045c","name":"Delaware County (part)"},{"fips":"48121c","name":"Denton County (part)"},{"fips":"8031a","name":"Denver city, Colorado"},{"fips":"26163a","name":"Detroit city, Michigan"},{"fips":"31055c","name":"Douglas County (part)"},{"fips":"17043c","name":"DuPage County (part)"},{"fips":"48141a","name":"El Paso city, Texas"},{"fips":"8041c","name":"El Paso County (part)"},{"fips":"36029c","name":"Erie County (part)"},{"fips":"25009c","name":"Essex County (part)"},{"fips":"34013c","name":"Essex County (part)"},{"fips":"51059c","name":"Fairfax County (part)"},{"fips":"9001c","name":"Fairfield County (part)"},{"fips":"48157c","name":"Fort Bend County (part)"},{"fips":"39049c","name":"Franklin County (part)"},{"fips":"6019c","name":"Fresno County (part)"},{"fips":"13121c","name":"Fulton County (part)"},{"fips":"13135c","name":"Gwinnett County (part)"},{"fips":"39061c","name":"Hamilton County (part)"},{"fips":"48201c","name":"Harris County (part)"},{"fips":"9003c","name":"Hartford County (part)"},{"fips":"27053c","name":"Hennepin County (part)"},{"fips":"48215c","name":"Hidalgo County (part)"},{"fips":"12057c","name":"Hillsborough County (part)"},{"fips":"15003c","name":"Honolulu County (part)"},{"fips":"34017c","name":"Hudson County (part)"},{"fips":"18097a","name":"Indianapolis city (balance), Indiana"},{"fips":"29095c","name":"Jackson County (part)"},{"fips":"12031a","name":"Jacksonville city, Florida"},{"fips":"1073c","name":"Jefferson County (part)"},{"fips":"20091c","name":"Johnson County (part)"},{"fips":"17089c","name":"Kane County (part)"},{"fips":"26081c","name":"Kent County (part)"},{"fips":"6029c","name":"Kern County (part)"},{"fips":"17097c","name":"Lake County (part)"},{"fips":"42071c","name":"Lancaster County (part)"},{"fips":"32003a","name":"Las Vegas city, Nevada"},{"fips":"12071c","name":"Lee County (part)"},{"fips":"6037a","name":"Los Angeles city, California"},{"fips":"21111a","name":"Louisville/Jefferson County metro government (balance), Kentucky"},{"fips":"26099c","name":"Macomb County (part)"},{"fips":"37119c","name":"Mecklenburg County (part)"},{"fips":"12086c","name":"Miami-Dade County (part)"},{"fips":"34023c","name":"Middlesex County (part)"},{"fips":"55079a","name":"Milwaukee city, Wisconsin"},{"fips":"34025c","name":"Monmouth County (part)"},{"fips":"36055c","name":"Monroe County (part)"},{"fips":"24031c","name":"Montgomery County (part)"},{"fips":"39113c","name":"Montgomery County (part)"},{"fips":"42091c","name":"Montgomery County (part)"},{"fips":"47037a","name":"Nashville-Davidson metropolitan government (balance), Tennessee"},{"fips":"36059c","name":"Nassau County (part)"},{"fips":"10003c","name":"New Castle County (part)"},{"fips":"9009c","name":"New Haven County (part)"},{"fips":"36005a","name":"New York city, New York"},{"fips":"36047a","name":"New York city, New York"},{"fips":"36061a","name":"New York city, New York"},{"fips":"36081a","name":"New York city, New York"},{"fips":"26125c","name":"Oakland County (part)"},{"fips":"34029c","name":"Ocean County (part)"},{"fips":"40109c","name":"Oklahoma County (part)"},{"fips":"12095c","name":"Orange County (part)"},{"fips":"6059c","name":"Orange County (part)"},{"fips":"12099c","name":"Palm Beach County (part)"},{"fips":"34031c","name":"Passaic County (part)"},{"fips":"42101a","name":"Philadelphia city, Pennsylvania"},{"fips":"4013a","name":"Phoenix city, Arizona"},{"fips":"53053c","name":"Pierce County (part)"},{"fips":"4019c","name":"Pima County (part)"},{"fips":"12103c","name":"Pinellas County (part)"},{"fips":"12105c","name":"Polk County (part)"},{"fips":"41051a","name":"Portland city, Oregon"},{"fips":"24033c","name":"Prince George's County (part)"},{"fips":"44007c","name":"Providence County (part)"},{"fips":"27123c","name":"Ramsey County (part)"},{"fips":"32003b","name":"Remainder - Clark County (part)"},{"fips":"17031b","name":"Remainder - Cook County (part)"},{"fips":"53033b","name":"Remainder - King County (part)"},{"fips":"6037b","name":"Remainder - Los Angeles County (part)"},{"fips":"4013b","name":"Remainder - Maricopa County (part)"},{"fips":"26163b","name":"Remainder - Wayne County (part)"},{"fips":"6065c","name":"Riverside County (part)"},{"fips":"6067c","name":"Sacramento County (part)"},{"fips":"49035c","name":"Salt Lake County (part)"},{"fips":"6071c","name":"San Bernardino County (part)"},{"fips":"6073c","name":"San Diego County (part)"},{"fips":"6075a","name":"San Francisco city, California"},{"fips":"6077c","name":"San Joaquin County (part)"},{"fips":"6081c","name":"San Mateo County (part)"},{"fips":"6085c","name":"Santa Clara County (part)"},{"fips":"53033a","name":"Seattle city, Washington"},{"fips":"47157c","name":"Shelby County (part)"},{"fips":"53061c","name":"Snohomish County (part)"},{"fips":"6099c","name":"Stanislaus County (part)"},{"fips":"29189c","name":"St. Louis County (part)"},{"fips":"36103c","name":"Suffolk County (part)"},{"fips":"39153c","name":"Summit County (part)"},{"fips":"48439c","name":"Tarrant County (part)"},{"fips":"48453c","name":"Travis County (part)"},{"fips":"40143c","name":"Tulsa County (part)"},{"fips":"34039c","name":"Union County (part)"},{"fips":"49049c","name":"Utah County (part)"},{"fips":"6111c","name":"Ventura County (part)"},{"fips":"37183c","name":"Wake County (part)"},{"fips":"11001a","name":"Washington city, District of Columbia"},{"fips":"41067c","name":"Washington County (part)"},{"fips":"36119c","name":"Westchester County (part)"},{"fips":"17197c","name":"Will County (part)"},{"fips":"25027c","name":"Worcester County (part)"}];
+	var geos = [{"fips":"06001c","name":"Alameda County, CA"},{"fips":"35001a","name":"Albuquerque, NM"},{"fips":"42003c","name":"Allegheny County, PA"},{"fips":"24003c","name":"Anne Arundel County, MD"},{"fips":"24005c","name":"Baltimore County, MD"},{"fips":"24510a","name":"Baltimore, MD"},{"fips":"34003c","name":"Bergen County, NJ"},{"fips":"48029c","name":"Bexar County, TX"},{"fips":"25025a","name":"Boston, MA"},{"fips":"12009c","name":"Brevard County, FL"},{"fips":"25005c","name":"Bristol County, MA"},{"fips":"36047a","name":"Brooklyn and Staten Island, New York City"},{"fips":"12011c","name":"Broward County, FL"},{"fips":"42017c","name":"Bucks County, PA"},{"fips":"34007c","name":"Camden County, NJ"},{"fips":"17031a","name":"Chicago, IL"},{"fips":"32003b","name":"Clark County (excluding Las Vegas), NV"},{"fips":"13067c","name":"Cobb County, GA"},{"fips":"48085c","name":"Collin County, TX"},{"fips":"06013c","name":"Contra Costa County, CA"},{"fips":"17031b","name":"Cook County (excluding Chicago), IL"},{"fips":"39035c","name":"Cuyahoga County, OH"},{"fips":"48113c","name":"Dallas County, TX"},{"fips":"13089c","name":"DeKalb County, GA"},{"fips":"42045c","name":"Delaware County, PA"},{"fips":"48121c","name":"Denton County, TX"},{"fips":"08031a","name":"Denver, CO"},{"fips":"26163a","name":"Detroit, MI"},{"fips":"31055c","name":"Douglas County, NE"},{"fips":"17043c","name":"DuPage County, IL"},{"fips":"08041c","name":"El Paso County, CO"},{"fips":"48141a","name":"El Paso, TX"},{"fips":"36029c","name":"Erie County, NY"},{"fips":"25009c","name":"Essex County, MA"},{"fips":"34013c","name":"Essex County, NJ"},{"fips":"51059c","name":"Fairfax County, VA"},{"fips":"09001c","name":"Fairfield County, CT"},{"fips":"48157c","name":"Fort Bend County, TX"},{"fips":"39049c","name":"Franklin County, OH"},{"fips":"06019c","name":"Fresno County, CA"},{"fips":"13121c","name":"Fulton County, GA"},{"fips":"13135c","name":"Gwinnett County, GA"},{"fips":"39061c","name":"Hamilton County, OH"},{"fips":"48201c","name":"Harris County, TX"},{"fips":"09003c","name":"Hartford County, CT"},{"fips":"27053c","name":"Hennepin County, MN"},{"fips":"48215c","name":"Hidalgo County, TX"},{"fips":"12057c","name":"Hillsborough County, FL"},{"fips":"15003c","name":"Honolulu County, HI"},{"fips":"34017c","name":"Hudson County, NJ"},{"fips":"18097a","name":"Indianapolis, IN"},{"fips":"29095c","name":"Jackson County, MO"},{"fips":"12031a","name":"Jacksonville, FL"},{"fips":"01073c","name":"Jefferson County, AL"},{"fips":"20091c","name":"Johnson County, KS"},{"fips":"17089c","name":"Kane County, IL"},{"fips":"26081c","name":"Kent County, MI"},{"fips":"06029c","name":"Kern County, CA"},{"fips":"53033b","name":"King County (excluding Seattle), WA"},{"fips":"17097c","name":"Lake County, IL"},{"fips":"42071c","name":"Lancaster County, PA"},{"fips":"32003a","name":"Las Vegas, NV"},{"fips":"12071c","name":"Lee County, FL"},{"fips":"06037a","name":"Los Angeles, CA"},{"fips":"06037b","name":"Los Angeles County (excluding Los Angeles), CA"},{"fips":"21111a","name":"Louisville/Jefferson County, KY"},{"fips":"26099c","name":"Macomb County, MI"},{"fips":"36061a","name":"Manhattan, New York City"},{"fips":"04013b","name":"Maricopa County (excluding Phoenix), AZ"},{"fips":"37119c","name":"Mecklenburg County, NC"},{"fips":"12086c","name":"Miami-Dade County, FL"},{"fips":"34023c","name":"Middlesex County, NJ"},{"fips":"55079a","name":"Milwaukee, WI"},{"fips":"34025c","name":"Monmouth County, NJ"},{"fips":"36055c","name":"Monroe County, NY"},{"fips":"24031c","name":"Montgomery County, MD"},{"fips":"39113c","name":"Montgomery County, OH"},{"fips":"42091c","name":"Montgomery County, PA"},{"fips":"47037a","name":"Nashville-Davidson metropolitan government, TN"},{"fips":"36059c","name":"Nassau County, NY"},{"fips":"10003c","name":"New Castle County, DE"},{"fips":"09009c","name":"New Haven County, CT"},{"fips":"26125c","name":"Oakland County, MI"},{"fips":"34029c","name":"Ocean County, NJ"},{"fips":"40109c","name":"Oklahoma County, OK"},{"fips":"06059c","name":"Orange County, CA"},{"fips":"12095c","name":"Orange County, FL"},{"fips":"12099c","name":"Palm Beach County, FL"},{"fips":"34031c","name":"Passaic County, NJ"},{"fips":"42101a","name":"Philadelphia, PA"},{"fips":"04013a","name":"Phoenix, AZ"},{"fips":"53053c","name":"Pierce County, WA"},{"fips":"04019c","name":"Pima County, AZ"},{"fips":"12103c","name":"Pinellas County, FL"},{"fips":"12105c","name":"Polk County, FL"},{"fips":"41051a","name":"Portland, OR"},{"fips":"24033c","name":"Prince George's County, MD"},{"fips":"44007c","name":"Providence County, RI"},{"fips":"36081a","name":"Queens, New York City"},{"fips":"27123c","name":"Ramsey County, MN"},{"fips":"06065c","name":"Riverside County, CA"},{"fips":"06067c","name":"Sacramento County, CA"},{"fips":"49035c","name":"Salt Lake County, UT"},{"fips":"06071c","name":"San Bernardino County, CA"},{"fips":"06073c","name":"San Diego County, CA"},{"fips":"06075a","name":"San Francisco, CA"},{"fips":"06077c","name":"San Joaquin County, CA"},{"fips":"06081c","name":"San Mateo County, CA"},{"fips":"06085c","name":"Santa Clara County, CA"},{"fips":"53033a","name":"Seattle, WA"},{"fips":"47157c","name":"Shelby County, TN"},{"fips":"53061c","name":"Snohomish County, WA"},{"fips":"06099c","name":"Stanislaus County, CA"},{"fips":"29189c","name":"St. Louis County, MO"},{"fips":"36103c","name":"Suffolk County, NY"},{"fips":"39153c","name":"Summit County, OH"},{"fips":"48439c","name":"Tarrant County, TX"},{"fips":"36005a","name":"The Bronx, New York City"},{"fips":"48453c","name":"Travis County, TX"},{"fips":"040143c","name":"Tulsa County, AZ"},{"fips":"34039c","name":"Union County, NJ"},{"fips":"49049c","name":"Utah County, UT"},{"fips":"06111c","name":"Ventura County, CA"},{"fips":"37183c","name":"Wake County, NC"},{"fips":"41067c","name":"Washington County, OR"},{"fips":"11001a","name":"Washington, DC"},{"fips":"26163b","name":"Wayne County (excluding Detroit), MI"},{"fips":"36119c","name":"Westchester County, NY"},{"fips":"17197c","name":"Will County, IL"},{"fips":"25027c","name":"Worcester County, MA"}];
 	var geo_lookup = {};
 	(function(){
 		var i=-1;
@@ -170,7 +170,7 @@ function main(){
 		dom.titlebox.append("p").style("font-size","1.5em").style("font-weight","bold").text("Share of the working age population that is employed, unemployed, or not in the labor force").style("margin","0.25em 0em");
 		dom.titlebox.append("p").style("font-size","1em").text("By race, in cities and counties with at least 500,000 residents, 2015").style("margin","0em");
 
-	dom.menu = dom.titlebox.append("div").classed("c-fix",true).style("margin","1.5em 0em 0em 0em");
+	dom.menu = dom.titlebox.append("div").classed("c-fix",true).style("margin","1em 0em 0em 0em");
 	
 	dom.selectWrap = dom.menu.append("div").style("float","left").style("margin-right","2em");
 	dom.select = dom.selectWrap.append("select");
@@ -186,21 +186,27 @@ function main(){
 	var cols = ["#e86e25", "#a91317", "#5ca86b", "#4d76b1", "#adc32b", "#88bbca"];
 	cols.background = "#fafafa";
 	var legend = {};
-	legend.wrap = dom.menu.append("div").style("float","left").style("clear","both").style("margin","0.5em 0em").classed("c-fix",true);
+	legend.wrap = dom.menu.append("div").style("float","left").style("margin","0.5em 0em").classed("c-fix",true);
 	legend.avg = legend.wrap.append("div").style("float","left").classed("c-fix",true).style("margin-right","1em");
 		legend.avg.append("div").style("width","16px").style("height","1.25em").style("float","left")
 				  .append("svg").attr("width","100%").attr("height","100%")
-				  .append("path").attr("d","M6.5,5 l5,9 l-10,0 z").attr("fill","#333333")
+				  .append("rect").attr("x",6).attr("y","4").attr("width","3").attr("height","10")
+				  	.style("shape-rendering","crispEdges").attr("fill","#333333")
+				  //.append("circle").attr("cx",6).attr("cy",10).attr("r","4").attr("fill","#333333")
+				  //.append("path").attr("d","M6.5,5 l5,9 l-10,0 z").attr("fill","#333333")
 				  ;
 		legend.avg.append("p").style("float","left").text("Average for race/ethnicity across all jurisdictions");
 
 	legend.selected = legend.wrap.append("div").style("float","left").classed("c-fix",true);
-	legend.selected.append("div").style("width","46px").style("height","1.25em").style("float","left")
+	legend.selected.append("div").style("width","16px").style("height","1.25em").style("float","left")
 				  .append("svg").attr("width","100%").attr("height","100%")
-				  .selectAll("path").data(cols.slice(0,4)).enter()
+				  .selectAll("path").data([1]).enter()
 				  .append("path").attr("d",function(d,i){
 				  	return "M" + (6.5+(10*i)) + ",5 l5,9 l-10,0 z"
-				  }).attr("fill",function(d,i){return d})
+				  }).attr("fill",function(d,i){
+				  	return "#333333";
+				  	//return d;
+				  })
 				  ;
 	legend.selectedGeo = legend.selected.append("p").style("float","left").text("Selected jurisdiction");
 
@@ -229,8 +235,8 @@ function main(){
 
 		var rollup = d3.nest().key(function(d){
 							return d.race;
-						});
-						/*.sortKeys(function(a,b){
+						})
+						.sortKeys(function(a,b){
 							var aval = order[a];
 							var bval = order[b];
 							var compare;
@@ -245,8 +251,8 @@ function main(){
 							}
 							finally{
 								return compare;
-							};
-						});*/
+							}
+						});
 
 		//need to rollup the data
 		var mapped = vars.map(function(d,i,a){
@@ -266,20 +272,23 @@ function main(){
 		var groupScale = d3.scaleBand().domain(groups).range([0,groupHeight]).round(true).paddingOuter(0.75).paddingInner(0.5);
 		
 		var pctBounds = ["5%", "95%"];
-		var pctBounds2 = ["15%", "85%"];
+		var pctBounds2 = ["8%", "92%"];
 
 		var bottom_layer = dom.svg.append("g");
 		var plot_layer = dom.svg.append("g");
 		var top_layer = dom.svg.append("g");
 
 		//source line
-		dom.wrap.append("div").style("width","100px").style("height","0px").style("border-top","1px solid #aaaaaa").style("margin","0em "+pctBounds2[0]+" 0.5em "+pctBounds2[0]);
+		dom.wrap.append("div").style("width","100px")
+							.style("height","0px")
+							.style("border-top","1px solid #aaaaaa")
+							.style("margin","0em "+pctBounds[0]+" 0.5em "+pctBounds[0]);
 		dom.wrap.append("p").classed("m-i-footer",true)
 				.text("Source: 2015 American Community Survey. Data are limited to the civilian population aged 18 to 64, not living in group quarters.")
-				.style("margin", "0em " + pctBounds2[0])
+				.style("margin", "0em " + pctBounds[0])
 				;
 
-		dom.titlebox.style("margin", "0em " + pctBounds2[0]);
+		dom.titlebox.style("margin", "0em " + pctBounds[0]);
 
 		//variable groupings: emp, unemp, nilf
 		var groups_update = plot_layer.selectAll("g").data(mapped);
@@ -290,7 +299,7 @@ function main(){
 			groups_enter.append("g").classed("place_block_layer",true).style("pointer-events","none");
 			groups_enter.append("g").classed("vline_layer",true);
 			groups_enter.append("g").classed("label_layer",true).append("line").style("pointer-events","none");
-			groups_enter.append("g").classed("avg_layer",true).attr("transform","translate(-5,0)").style("pointer-events","none");
+			groups_enter.append("g").classed("avg_layer",true).attr("transform","translate(-205,0)").style("pointer-events","none");
 			groups_enter.append("g").classed("anno_layer",true).attr("transform","translate(-405,0)").style("pointer-events","none");
 
 		var groups = groups_enter.merge(groups_update)
@@ -357,6 +366,7 @@ function main(){
 				.text(function(d,i){return format.sh0(d.v);})
 				.attr("text-anchor","middle")
 				.style("font-size","13px")
+				.attr("fill","#666666")
 				;
 
 		/*tickMarksLab.selectAll("text.xaxis-label")
@@ -385,10 +395,11 @@ function main(){
 		.attr("x", "50%")
 		.attr("y", function(d){return groupScale(d.key)-2})
 		.attr("text-anchor","middle")
-		.text(function(d){return d.key.toUpperCase()})
-		.style("font-size","11px")
+		.text(function(d){return d.key})
+		.style("font-size","13px")
+		.style("font-weight","bold")
 		.attr("fill", function(d,i){
-				return d3.color(cols[order[d.key]]).darker(3);
+				return d3.color(cols[order[d.key]]).darker(2);
 		})
 		;
 
@@ -514,12 +525,15 @@ function main(){
 				});
 
 			var avg_e = avg_u.enter().append("svg")
-				.style("width","10px")
-				.style("height","30px");
+				.attr("width","400px")
+				.attr("height","30px");
 				//avg_e.append("rect").attr("width","3").attr("height","20").attr("x","1").attr("y",0);
-				//avg_e.append("rect").attr("width","1").attr("height","20").attr("x","2").attr("y",0);
-				//avg_e.append("rect").attr("width","5").attr("height","10").attr("x","0").attr("y",16);
-				avg_e.append("path").attr("d","M6.5,13 l5,9 l-10,0 z");
+				avg_e.append("rect").attr("width","5").attr("height","9").attr("x","204").attr("y",4).attr("fill",cols.background).style("shape-rendering","crispEdges");
+				avg_e.append("rect").attr("width","3").attr("height","8").attr("x","205").attr("y",5).attr("fill","#333333").style("shape-rendering","crispEdges");
+				avg_e.append("text").attr("x","206.5").attr("y","23").style("font-size","13px").attr("text-anchor","middle").attr("fill","#666666");
+				//avg_e.append("circle").attr("cx","6.5").attr("cy","10").attr("fill","#333333").attr("r","3").attr("stroke","#ffffff").attr("stroke-width","1.5"); 
+				//avg_e.append("circle").attr("cx","6.5").attr("cy","10").attr("fill","#333333").attr("r","3").attr("stroke","#ffffff").attr("stroke-width","1.5"); 
+				//avg_e.append("path").attr("d","M6.5,13 l5,9 l-10,0 z");
 
 			avg_e.merge(avg_u)
 				.attr("x", function(d,i){
@@ -528,20 +542,22 @@ function main(){
 				}).attr("y", function(d,i){
 					return groupScale(d.key);
 				})
-				.selectAll("path")
+				.select("text").text(function(d,i){
+					return format.sh1(d.values[0].avg_share);
+				});
+				
+				/*.selectAll("path")
 				.attr("stroke","#eeeeee")
 				.attr("stroke-width",0)
 				.attr("fill",function(d,i){return "#555555"})
 				//.style("shape-rendering","crispEdges")
-				;
+				;*/
 
 			var currently_selected_geo = null;
-			var currently_selected_group = null;
 			function selectGeo(code, persistent, duration, isolate){
 				var dur = arguments.length > 2 ? duration : 500;
 				if(code===null){
-					//no-op
-					//groups.select("g.anno_layer").selectAll("svg").remove();
+					groups.select("g.anno_layer").selectAll("svg").remove();
 				}
 				else{
 
@@ -587,9 +603,10 @@ function main(){
 					var svgs_e = svgs_u.enter().append("svg").attr("width","800px").attr("height","100px").attr("x","50%");
 					var svgs_pn = svgs_e.append("g").classed("place_name",true).attr("transform","translate(0,22)");
 							//svgs_pn.append("rect").attr("width","50%").attr("height","22px").attr("x","0").attr("y","-22").attr("fill",cols.background).attr("stroke","red");
-							svgs_pn.append("text").text("X").attr("x",405).attr("y",0).attr("text-anchor","start").style("font-size","11px").text("Label");
-						svgs_e.append("path").attr("d","M406.5,36 l7,12 l-14,0 z").attr("stroke","#ffffff").attr("stroke-width","2");
-						svgs_e.append("text").classed("value",true).text("name").attr("x",413).attr("y",47).style("font-size","11px").text("Label");//.attr("fill","#666666");
+							svgs_pn.append("text").text("X").attr("x",405).attr("y",0).attr("text-anchor","start").style("font-size","13px").text("Label");
+						svgs_e.append("rect").attr("x","391.5").attr("y","37").attr("height","13px").attr("width","30px").attr("fill",cols.background).attr("fill-opacity",0.85);
+						svgs_e.append("path").attr("d","M406.5,36 l7,12 l-14,0 z").attr("stroke","#ffffff").attr("stroke-width","1");
+						svgs_e.append("text").classed("value",true).text("name").attr("x",413).attr("y",48).style("font-size","13px").text("Label");//.attr("fill","#666666");
 
 					var svgs = svgs_e.merge(svgs_u)
 									.attr("y", function(d,i){
@@ -613,7 +630,6 @@ function main(){
 						;
 
 					var place = geo_lookup[code];
-					legend.selectedGeo.text(place);
 
 					var place_name_groups = svgs.select("g.place_name");
 					var place_names = place_name_groups.selectAll("text").data(function(d,i){
@@ -634,7 +650,7 @@ function main(){
 						})
 						.attr("x",405)
 						.attr("y",1)
-						.style("font-size","11px")
+						.style("font-size","13px")
 						.text(function(d,i){return d.p})
 						;
 
@@ -663,7 +679,11 @@ function main(){
 								thiz.style("opacity",1);
 							})*/
 							;
-							currently_selected_group = isolate[1];
+
+						place_name_groups.interrupt().style("opacity", function(d,i){
+							return d.race==isolate[1] && d.status==isolate[0] ? "1" : "0"; 
+						});
+
 					} else{
 						svgs.interrupt()
 							.style("opacity",1)
@@ -674,18 +694,35 @@ function main(){
 								return d.x + "%"
 							})
 							;
+
+						place_name_groups.interrupt().transition().duration(dur).style("opacity", 0);
 					}	
 
-					place_name_groups.style("display", function(d,i){
-						return d.race==currently_selected_group ? "inline" : "none"; //d.status==isolate[0] && 
-					});			
+			
 
 					/*vlabels.select("tspan.var-label-place").text(function(d,i){
 						return " / Highlighting " + geo_lookup[code];
 					});*/
 
+					var selectHighlightTimer;
 					if(persistent){
 						dom.select.node().value = currently_selected_geo = code;
+						clearTimeout(selectHighlightTimer);
+						dom.select.classed("on-change",true);
+						selectHighlightTimer = setTimeout(function(){
+							dom.select.classed("on-change",false);
+						}, dur-250 < 0 ? 250 : dur-250);
+
+						/*dom.select.interrupt().style("border-color",null)
+							  .transition().duration(dur/2).style("border-color","red")
+							  .transition().duration(dur/2).style("border-color",null)
+							  ;*/
+						//legend.selectedGeo.text(place);
+					}
+					else{
+						clearTimeout(selectHighlightTimer);
+						dom.select.classed("on-change", false);
+						dom.select.node().value = "99999";
 					}
 				}
 			} //end selectGeo
@@ -724,7 +761,7 @@ function main(){
 					clearTimeout(hover_timer);
 
 					hover_timer = setTimeout(function(){
-						selectGeo(currently_selected_geo, true, 700);
+						selectGeo(currently_selected_geo, true, 300);
 					}, 500);
 				});
 

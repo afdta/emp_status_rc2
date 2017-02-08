@@ -15,6 +15,13 @@
 	border:1px solid #aaaaaa;
 	max-width:100%;
 	font-size:1em;
+	transition: border 0.25s;
+	transition: color 0.25s;
+}
+
+.m-i select.on-change{
+	border: 1px solid #dc2a2a;
+	color: #dc2a2a;
 }
 
 .m-i p{

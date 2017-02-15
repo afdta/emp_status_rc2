@@ -116,6 +116,13 @@ format.dolle30 = function(v){return "$" + format.num0(v*1000)};
 //id
 format.id = function(v){return v};
 
+//possessive
+format.possessive = function(v){
+	var s = v+"";
+	var last = s.slice(-1).toLowerCase();
+	return last=="s" ? s+"'" : s+"'s";
+};
+
 //wrapper that handles missings/nulls
 format.fn = function(v, fmt){
 	if(format.hasOwnProperty(fmt)){
@@ -392,14 +399,14 @@ function main(){
 		});
 		labels.exit().remove();
 		labels.enter().append("text").classed("group-label",true).merge(labels)
-		.attr("x", "50%")
-		.attr("y", function(d){return groupScale(d.key)-2})
-		.attr("text-anchor","middle")
+		.attr("x", "8%")
+		.attr("y", function(d){return groupScale(d.key)+10})
+		.attr("text-anchor","end")
 		.text(function(d){return d.key})
 		.style("font-size","13px")
 		.style("font-weight","bold")
 		.attr("fill", function(d,i){
-				return d3.color(cols[order[d.key]]).darker(2);
+				return d3.color(cols[order[d.key]]).darker(1);
 		})
 		;
 
@@ -420,7 +427,7 @@ function main(){
 			   .attr("text-anchor","middle")
 			   .style("font-size","1em")
 			   .text(function(d){return d.label})
-			   .style("font-weight","bold")
+			   .style("font-weight","normal")
 			   ;
 
 		//boxes around variable labels
@@ -482,12 +489,13 @@ function main(){
 			.attr("fill", function(d,i){
 				return cols[order[d.race]];
 			})
-			.attr("fill-opacity","0.4")
+			.attr("fill-opacity","0.3")
 			.attr("stroke-opacity","0.5")
 			.attr("stroke-width","0")
 			.attr("stroke", function(d,i){
 				return cols[order[d.race]];
-			});
+			})
+			.style("shape-rendering","crispEdges");
 
 			D	
 			.transition()
@@ -529,7 +537,7 @@ function main(){
 				.attr("height","30px");
 				//avg_e.append("rect").attr("width","3").attr("height","20").attr("x","1").attr("y",0);
 				avg_e.append("rect").attr("width","5").attr("height","9").attr("x","204").attr("y",4).attr("fill",cols.background).style("shape-rendering","crispEdges");
-				avg_e.append("rect").attr("width","3").attr("height","8").attr("x","205").attr("y",5).attr("fill","#333333").style("shape-rendering","crispEdges");
+				avg_e.append("rect").attr("width","3").attr("height","7").attr("x","205").attr("y",5).attr("fill","#333333").style("shape-rendering","crispEdges");
 				avg_e.append("text").attr("x","206.5").attr("y","23").style("font-size","13px").attr("text-anchor","middle");
 				//avg_e.append("circle").attr("cx","6.5").attr("cy","10").attr("fill","#333333").attr("r","3").attr("stroke","#ffffff").attr("stroke-width","1.5"); 
 				//avg_e.append("circle").attr("cx","6.5").attr("cy","10").attr("fill","#333333").attr("r","3").attr("stroke","#ffffff").attr("stroke-width","1.5"); 
@@ -605,7 +613,7 @@ function main(){
 							//svgs_pn.append("rect").attr("width","50%").attr("height","22px").attr("x","0").attr("y","-22").attr("fill",cols.background).attr("stroke","red");
 							svgs_pn.append("text").text("X").attr("x",405).attr("y",0).attr("text-anchor","start").style("font-size","13px").text("Label");
 						svgs_e.append("rect").attr("x","391.5").attr("y","37").attr("height","13px").attr("width","30px").attr("fill",cols.background).attr("fill-opacity",0.85);
-						svgs_e.append("path").attr("d","M406.5,36 l7,12 l-14,0 z").attr("stroke","#ffffff").attr("stroke-width","1");
+						svgs_e.append("path").attr("d","M406.5,37 l6.5,12 l-13,0 z").attr("stroke","#ffffff").attr("stroke-width","1");
 						svgs_e.append("text").classed("value",true).text("name").attr("x",413).attr("y",48).style("font-size","13px").text("Label");//.attr("fill","#666666");
 
 					var svgs = svgs_e.merge(svgs_u)

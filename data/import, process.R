@@ -23,7 +23,7 @@ nmlz <- function(chunk){
   return(chunk)
 }
 tidy2 <- tidy[c("fips","name","race","Total","status","count","share")] %>% filter(race %in% groups[1:4]) %>% group_by(status) %>% do(nmlz(.))
-tidy2m <- tidy2 %>% group_by(status, race) %>% summarise(avg_z=mean(z, na.rm=TRUE), avg_share=mean(share, na.rm=TRUE))
+tidy2m <- tidy2 %>% group_by(status, race) %>% summarise(avg_z=median(z, na.rm=TRUE), avg_share=median(share, na.rm=TRUE))
 
 ll <- list(obs=split(tidy2, tidy2$status), avg=split(tidy2m, tidy2m$status))
 
